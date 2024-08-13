@@ -47,9 +47,6 @@ app.post("/upload",upload,(req,res) =>{
 });
 
 
-
-
-
 const addressRoutes = require("./routes/addressRoutes");
 app.use("/addresses", addressRoutes);
 
@@ -73,3 +70,7 @@ app.use("/services", serviceRoutes);
 
 const userRoutes = require("./routes/userRoutes");
 app.use("/users", userRoutes);
+
+
+const sendMail = require("./util/mailer");
+app.post("/sendMail", sendMail);
