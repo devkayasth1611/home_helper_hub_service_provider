@@ -22,6 +22,28 @@ app.listen(3000, (err, success) => {
   }
 }); //where my services will called()
 
+
+// library of file upload multer.
+const multer = require("multer");
+//const upload = multer();
+const upload = multer({
+  storage: multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, "Uploads");
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.filename + "-" + Date.now() + ".png");
+    },
+  }),
+}).single("user_file");
+
+app.post("/upload", upload, (req, res) => {
+  res.send("file upload");
+});
+
+
+
+
 const addressRoutes = require("./routes/addressRoutes");
 app.use("/addresses", addressRoutes);
 
