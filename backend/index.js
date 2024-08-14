@@ -45,3 +45,6 @@ app.use("/services", serviceRoutes);
 
 const userRoutes = require("./routes/userRoutes");
 app.use("/users", userRoutes);
+
+const sendMail = require("./util/mailer");
+app.post("/sendMail", sendMail);
