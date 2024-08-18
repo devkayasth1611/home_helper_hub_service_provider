@@ -1,6 +1,6 @@
 import React from "react";
 
-function Footer() {
+function tempFooter() {
   return (
     <footer className="bgCol text-white text-center py-3 mt-auto">
         <div className="container">
@@ -10,4 +10,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default tempFooter;

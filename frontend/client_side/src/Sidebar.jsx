@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Sidebar() {
+function tempSidebar() {
   return (
     <div className="container-fluid">
         <div className="row">
@@ -35,4 +35,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default tempSidebar;

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header() {
+function tempHeader() {
   return (
     <header className="bgCol text-white">
         <div className="container">
@@ -34,4 +34,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default tempHeader;
