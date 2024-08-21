@@ -11,8 +11,8 @@ body {
   min-height: 100vh;
 }
 
-.bgCol{
-  background-color: #1e7a55;
+.bgCol {
+  background-color: #000000;
 }
 
 main {
@@ -25,10 +25,17 @@ footer {
 }
 
 .sidebar {
+  position: fixed;
   min-height: 100vh;
   background-color: lightgreen;
 }
 
-tCol{
+Col {
   color: dark;
+}
+
+.logo {
+  width: 15%; /* Adjust the width to your liking */
+  height: 50px; /* Adjust the height to your liking */
+  margin-right: 10px; /* Add some space between the logo and text */
 }
