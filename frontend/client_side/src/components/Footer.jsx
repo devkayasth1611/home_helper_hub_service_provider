@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -11,12 +12,12 @@ function Footer() {
                      <h2 className="useful_text">Quick Links</h2>
                      <div className="footer_menu">
                         <ul>
-                           <li className="active"><a href="index.html">Home</a></li>
-                           <li><a href="about.html">About</a></li>
-                           <li><a href="service.html">Services</a></li>
-                           <li><a href="blog.html">Blog</a></li>
-                           <li><a href="testimonial.html">Testimonial</a></li>
-                           <li><a href="contact.html">Contact Us</a></li>
+                           <li className="active"><Link to="/">Home</Link></li>
+                           <li><Link to="/AboutUs">About</Link></li>
+                           <li><Link to="/Service">Services</Link></li>
+                           <li><Link href="blog.html">Blog</Link></li>
+                           <li><Link to="/Appointment">Appointment</Link></li>
+                           <li><Link to="/ContactUS">Contact Us</Link></li>
                         </ul>
                      </div>
                   </div>
