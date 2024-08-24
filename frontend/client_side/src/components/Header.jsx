@@ -1,58 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 
-function tempHeader() {
+function Header({ onToggleSidebar }) {
   return (
-    <header className="bgCol text-white">
-      <div className="container">
-        <div className="d-flex flex-wrap align-items-center justify-content-between py-3">
-          <h1 className="h3">
-            <img src="logo.png" alt="Logo" className="logo" />
-            HomeHelper Hub
-          </h1>
-
-          {/* <!-- Navbar --> */}
-          <nav className="d-none d-md-block">
-            <ul className="nav">
-              <li className="nav-item">
-                <Link className="nav-link text-white" to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link text-white" to="AboutUS">
-                  About Us
-                </Link>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white" href="#">
-                  Services
-                </a>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link text-white" to="/ContactUs">
-                  ContactUs
-                </Link>
-              </li>
-            </ul>
-          </nav>
-
-          <button
-            className="btn btn-light d-md-none"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#sidebar"
-            aria-controls="sidebar"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            Toggle Sidebar
-          </button>
-        </div>
+    <div className="header_section">
+         <div className="container">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+               <Link className="navbar-brand" to="/Home" ><img className="hw" src="logo.png" /> <span className="title">Home Helper Hub</span></Link>
+               {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> */}
+               {/* <span className="navbar-toggler-icon"></span>
+               </button> */}
+               <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul className="navbar-nav ml-auto">
+                     <li className="nav-item active">
+                        <Link className="nav-link" to="/Home">Home</Link>
+                     </li>
+                     <li className="nav-item">
+                        <Link className="nav-link" to="/AboutUS">About Us</Link>
+                     </li>
+                     <li className="nav-item">
+                        <a className="nav-link" href="services.html">Services</a>
+                     </li>
+                     <li className="nav-item">
+                        <a className="nav-link" href="testimonial.html">Testimonial</a>
+                     </li>
+                     <li className="nav-item">
+                        <a className="nav-link" href="blog.html">Blog</a>
+                     </li>
+                     <li className="nav-item">
+                        <a className="nav-link" href="contact.html">Contact Us</a>
+                     </li>
+                  </ul>
+                  <form className="form-inline my-2 my-lg-0">
+                  </form>
+               </div>
+            </nav>
+         </div>
       </div>
-    </header>
   );
 }
 
-export default tempHeader;
+export default Header;

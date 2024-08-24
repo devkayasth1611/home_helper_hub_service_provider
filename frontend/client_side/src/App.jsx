@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
@@ -9,11 +9,13 @@ import Home from "./components/Home";
 import "./App.css";
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <>
       <Router>
-        <Header />
-        <Sidebar />
+        <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
+        {sidebarOpen && <Sidebar />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ContactUs" element={<ContactUs />} />
