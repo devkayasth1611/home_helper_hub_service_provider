@@ -7,7 +7,7 @@ function Header({ onToggleSidebar }) {
     <div className="header_section">
          <div className="container">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-               <Link className="navbar-brand" to="/" ><img className="hw" src="logo.png" /> <span className="title">Home Helper Hub</span></Link>
+               <Link className="navbar-brand" to="/" ><img className="hw" src="./logo.png" /> <span className="title">Home Helper Hub</span></Link>
                <div className="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul className="navbar-nav ml-auto">
                      <li className="nav-item ">

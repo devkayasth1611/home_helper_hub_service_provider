@@ -177,6 +177,11 @@ img {
     height: auto;
 }
 
+.img_s{
+    height: 100px;
+    width: 100px;
+}
+
  :focus {
     outline: 0;
 }
