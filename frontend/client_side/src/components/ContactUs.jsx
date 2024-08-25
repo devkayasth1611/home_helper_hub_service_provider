@@ -24,7 +24,7 @@ const ContactUs = () => {
                   <div className="col-md-6 padding_right0">
                      <div className="map_main">
                         <div className="map-responsive">
-                           <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="470" ></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235014.29980639598!2d72.41458770277544!3d23.020157729658276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1724564315643!5m2!1sen!2sin" width="600" height="450"></iframe>
                         </div>
                      </div>
                   </div>
