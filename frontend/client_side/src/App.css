@@ -161,6 +161,25 @@ a,
     align-items: center;
 }
 
+.center_text{
+    text-align: center;
+}
+
+.img_title{
+    height: 150px;
+    width: 150px;
+}
+
+.text_s{
+    font-style: italic;
+    font-weight: 1000;
+}
+
+.img_size{
+    height: 250px;
+    width: 250px;
+}
+
 .title{
   padding-top: 30px;
   font-size: 25px;
@@ -302,8 +321,9 @@ button {
 .banner_section {
     width: 100%;
     float: left;
-    background-image: url();
+    background-image: url("../public/home.png");
     height: auto;
+    opacity: 0.9;
     background-repeat: repeat;
     background-size: 100%;
     padding-bottom: 100px;
@@ -313,7 +333,8 @@ button {
     width: 100%;
     float: left;
     font-size: 70px;
-    color: #0f0505;
+    color: rgba(249, 172, 5, 0.959);
+    text-shadow: 1px 8px 6px #f4eaea, 1px 0px 8px #f3f3fa;
     padding-top: 100px;
     font-weight: bold;
     line-height: 70px;
@@ -325,7 +346,9 @@ button {
     width: 100%;
     float: left;
     font-size: 16px;
-    color: #050303;
+    color: rgb(13, 13, 13);
+    text-shadow: 1px 8px 6px #dcd4d4, 1px 0px 8px #e6e6de;
+    font-weight: 1000;
     margin: 0px;
     padding: 30px 0px;
     text-align: center;

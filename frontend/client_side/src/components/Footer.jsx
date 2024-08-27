@@ -15,15 +15,14 @@ function Footer() {
                            <li className="active"><Link to="/">Home</Link></li>
                            <li><Link to="/AboutUs">About</Link></li>
                            <li><Link to="/Service">Services</Link></li>
-                           <li><Link href="blog.html">Blog</Link></li>
                            <li><Link to="/Appointment">Appointment</Link></li>
                            <li><Link to="/ContactUS">Contact Us</Link></li>
                         </ul>
                      </div>
                   </div>
                   <div className="col-lg-4 col-md-4">
-                     <h2 className="useful_text">Blog</h2>
-                     <p className="footer_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
+                     <h2 className="useful_text"></h2>
+                     <p className="footer_text"></p>
                      <div className="social_icon">
                         <ul>
                            <li><a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -42,7 +41,7 @@ function Footer() {
          </div>
          <div className="copyright_section">
          <div className="container">
-            <p className="copyright_text">2024 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a> Distribution by <a href="https://themewagon.com">ThemeWagon</a></p>
+            <p className="copyright_text">@2024 All Rights Reserved. Design by Dev, Vishal, Krishna.</p>
          </div>
       </div>
       </div>

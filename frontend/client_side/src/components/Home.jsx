@@ -13,10 +13,9 @@ function Home() {
                 <div className="container">
                   <div className="row">
                     <div className="col-md-12">
-                      <h1 className="banner_taital">Electricity Service </h1>
+                      <h1 className="banner_taital">Home Services </h1>
                       <p className="banner_text">
-                        Anything embarrassing hidden in the middle of text. All
-                        the Lorem Ipsuanything embarrassing h
+                      To provide every homeowner with convenient access to trusted and reliable home services, ensuring a comfortable, safe, and well-maintained living environment. Through innovation, integrity, and customer satisfaction, we aim to redefine how home services are delivered and experienced.
                       </p>
                       <div className="read_bt">
                         <Link to="/Appointment">Book Now</Link>
