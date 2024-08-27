@@ -8,14 +8,14 @@ function Electrician() {
           <div className="building_icon">
             <img className="img_title" src="../electrician.png" />
           </div>
-          <span className="title">BrighSpark Electrician</span>
+          <span className="title1">BrighSpark Electrician</span>
         </div>
 
         {/* <!-- Residential Electrical Services --> */}
         <div class="container mt-5">
           <div class="card mb-4">
             <div class="card-header">
-              <span className="text-primary mb-3 title">
+              <span className="text-primary mb-3 title1">
                 Residential Electrical Services
               </span>
             </div>
@@ -79,7 +79,7 @@ function Electrician() {
           {/* <!-- Commercial Electrical Services --> */}
           <div class="card mb-4">
             <div class="card-header">
-              <span className="text-primary mb-3 title">
+              <span className="text-primary mb-3 title1">
                 Commercial Electrical Services
               </span>
             </div>
@@ -137,7 +137,7 @@ function Electrician() {
           {/* <!-- Specialty Electrical Services --> */}
           <div class="card mb-4">
             <div class="card-header">
-              <span className="text-primary mb-3 title">
+              <span className="text-primary mb-3 title1">
                 Specialty Electrical Services
               </span>
             </div>
@@ -186,7 +186,7 @@ function Electrician() {
           {/* <!-- Emergency Electrical Services --> */}
           <div class="card mb-4">
             <div class="card-header">
-              <span className="text-primary mb-3 title">
+              <span className="text-primary mb-3 title1">
                 Emergency Electrical Services
               </span>
             </div>
@@ -216,7 +216,7 @@ function Electrician() {
           {/* <!-- Electrical Consultation and Design Services --> */}
           <div class="card mb-4">
             <div class="card-header">
-              <span className="text-primary mb-3 title">
+              <span className="text-primary mb-3 title1">
                 Electrical Consultation and Design Services
               </span>
             </div>
@@ -246,7 +246,7 @@ function Electrician() {
           {/* <!-- Additional Services --> */}
           <div class="card mb-4">
             <div class="card-header">
-              <span className="text-primary mb-3 title">
+              <span className="text-primary mb-3 title1">
                 Additional Services
               </span>
             </div>
@@ -274,7 +274,7 @@ function Electrician() {
           </div>
         </div>
 
-        <span className="title">Buy Service</span>
+        <span className="title1">Buy Service</span>
         <div className="container mt-4">
           <div className="card">
             <div className="card-body">
@@ -403,7 +403,7 @@ function Electrician() {
         </div>
         {/* image section */}
         <div className="container mt-4">
-          <h4 className="mb-3 title">Our Projects</h4>
+          <h4 className="mb-3 title1">Our Projects</h4>
           <div className="row">
             <div className="col-md-4 mb-3">
               <img

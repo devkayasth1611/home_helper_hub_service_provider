@@ -9,12 +9,12 @@ function Mason() {
           <div className="building_icon">
             <img className="img_title" src="../mason.png" alt="Mason Plus" />
           </div>
-          <span className="title">Mason Master</span>
+          <span className="title1">Mason Master</span>
         </div>
 
         {/* <!-- Bricklaying Services --> */}
         <section id="bricklaying-services" className="mb-5">
-          <span className="text-primary mb-3 title">Bricklaying Services</span>
+          <span className="text-primary mb-3 title1">Bricklaying Services</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -35,7 +35,7 @@ function Mason() {
 
         {/* <!-- Concrete Services --> */}
         <section id="concrete-services" className="mb-5">
-          <span className="text-primary mb-3 title">Concrete Services</span>
+          <span className="text-primary mb-3 title1">Concrete Services</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -56,7 +56,7 @@ function Mason() {
 
         {/* <!-- Stone Masonry --> */}
         <section id="stone-masonry" className="mb-5">
-          <span className="text-primary mb-3 title">Stone Masonry</span>
+          <span className="text-primary mb-3 title1">Stone Masonry</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -76,7 +76,7 @@ function Mason() {
 
         {/* <!-- Chimney Construction --> */}
         <section id="chimney-construction" className="mb-5">
-          <span className="text-primary mb-3 title">Chimney Construction</span>
+          <span className="text-primary mb-3 title1">Chimney Construction</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -96,7 +96,7 @@ function Mason() {
 
         {/* <!-- Masonry Repair Services --> */}
         <section id="masonry-repair" className="mb-5">
-          <span className="text-primary mb-3 title">Masonry Repair Services</span>
+          <span className="text-primary mb-3 title1">Masonry Repair Services</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -117,7 +117,7 @@ function Mason() {
 
       {/* Buy Service */}
       <div className="container mt-4">
-        <span className="text-primary mb-3 title">Buy Service</span>
+        <span className="text-primary mb-3 title1">Buy Service</span>
         <div className="card">
           <div className="card-body">
             <div className="row">
@@ -208,7 +208,7 @@ function Mason() {
 
       {/* image section */}
       <div className="container mt-4">
-        <h4 className="mb-3 title">Our Projects</h4>
+        <h4 className="mb-3 title1">Our Projects</h4>
         <div className="row">
           <div className="col-md-4 mb-3">
             <img

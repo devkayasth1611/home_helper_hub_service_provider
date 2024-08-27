@@ -9,12 +9,12 @@ function SwiftMove() {
           <div className="moving_icon">
             <img className="img_title" src="../pack.png" alt="Swift Move Icon" />
           </div>
-          <span className="title">Swift Move</span>
+          <span className="title1">Swift Move</span>
         </div>
 
         {/* <!-- Residential Moving --> */}
         <section id="residential-moving" className="mb-5">
-          <span className="text-primary mb-3 title">Residential Moving</span>
+          <span className="text-primary mb-3 title1">Residential Moving</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -34,7 +34,7 @@ function SwiftMove() {
 
         {/* <!-- Commercial Moving --> */}
         <section id="commercial-moving" className="mb-5">
-          <span className="text-primary mb-3 title">Commercial Moving</span>
+          <span className="text-primary mb-3 title1">Commercial Moving</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -54,7 +54,7 @@ function SwiftMove() {
 
         {/* <!-- Specialty Moving --> */}
         <section id="specialty-moving" className="mb-5">
-          <span className="text-primary mb-3 title">Specialty Moving</span>
+          <span className="text-primary mb-3 title1">Specialty Moving</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -74,7 +74,7 @@ function SwiftMove() {
 
         {/* <!-- Packing Services --> */}
         <section id="packing-services" className="mb-5">
-          <span className="text-primary mb-3 title">Packing Services</span>
+          <span className="text-primary mb-3 title1">Packing Services</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -94,7 +94,7 @@ function SwiftMove() {
 
         {/* Buy Service */}
         <div className="container mt-4">
-          <span className="text-primary mb-3 title">Buy Service</span>
+          <span className="text-primary mb-3 title1">Buy Service</span>
           <div className="card">
             <div className="card-body">
               <div className="row">
@@ -184,7 +184,7 @@ function SwiftMove() {
 
         {/* Image Section */}
         <div className="container mt-4">
-          <h4 className="mb-3 title">Our Projects</h4>
+          <h4 className="mb-3 title1">Our Projects</h4>
           <div className="row">
             <div className="col-md-4 mb-3">
               <img

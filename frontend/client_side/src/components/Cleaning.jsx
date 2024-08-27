@@ -14,12 +14,12 @@ function Cleaning() {
               alt="Cleaning Service"
             />
           </div>
-          <span className="title">Sparkle Clean</span>
+          <span className="title1">Sparkle Clean</span>
         </div>
 
         {/* Residential Cleaning */}
         <section id="residential-cleaning" className="mb-5">
-          <span className="text-primary mb-3 title">Residential Cleaning</span>
+          <span className="text-primary mb-3 title1">Residential Cleaning</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -39,7 +39,7 @@ function Cleaning() {
 
         {/* Commercial Cleaning */}
         <section id="commercial-cleaning" className="mb-5">
-          <span className="text-primary mb-3 title">Commercial Cleaning</span>
+          <span className="text-primary mb-3 title1">Commercial Cleaning</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -59,7 +59,7 @@ function Cleaning() {
 
         {/* Specialty Cleaning */}
         <section id="specialty-cleaning" className="mb-5">
-          <span className="text-primary mb-3 title">Specialty Cleaning</span>
+          <span className="text-primary mb-3 title1">Specialty Cleaning</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -79,7 +79,7 @@ function Cleaning() {
 
         {/* Emergency Cleaning Services */}
         <section id="emergency-cleaning" className="mb-5">
-          <span className="text-primary mb-3 title">Emergency Cleaning Services</span>
+          <span className="text-primary mb-3 title1">Emergency Cleaning Services</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -98,7 +98,7 @@ function Cleaning() {
 
         {/* Consultation and Design Services */}
         <section id="consultation-design" className="mb-5">
-          <span className="text-primary mb-3 title">Consultation and Design Services</span>
+          <span className="text-primary mb-3 title1">Consultation and Design Services</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -116,7 +116,7 @@ function Cleaning() {
 
         {/* Additional Services */}
         <section id="additional-services" className="mb-5">
-          <span className="text-primary mb-3 title">Additional Services</span>
+          <span className="text-primary mb-3 title1">Additional Services</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -136,7 +136,7 @@ function Cleaning() {
 
       {/* Buy Service Form */}
       <div className="container mt-4">
-        <span className="text-primary mb-3 title">Buy Service</span>
+        <span className="text-primary mb-3 title1">Buy Service</span>
         <div className="card">
           <div className="card-body">
             <form>
@@ -346,7 +346,7 @@ function Cleaning() {
 
       {/* Image Gallery */}
       <div className="container mt-4">
-        <h4 className="mb-3 title">Our Projects</h4>
+        <h4 className="mb-3 title1">Our Projects</h4>
         <div className="row">
           <div className="col-md-4 mb-3">
             <img

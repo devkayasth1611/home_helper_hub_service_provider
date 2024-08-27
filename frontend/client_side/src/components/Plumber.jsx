@@ -9,12 +9,12 @@ function Plumber() {
           <div className="building_icon">
             <img className="img_title" src="../plumber.png" alt="Plumber Icon" />
           </div>
-          <span className="title">Plumber Perfact</span>
+          <span className="title1">Plumber Perfact</span>
         </div>
 
         {/* <!-- Pipe Installation --> */}
         <section id="pipe-installation" className="mb-5">
-          <span className="text-primary mb-3 title">Pipe Installation</span>
+          <span className="text-primary mb-3 title1">Pipe Installation</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -36,7 +36,7 @@ function Plumber() {
 
         {/* <!-- Leak Repair --> */}
         <section id="leak-repair" className="mb-5">
-          <span className="text-primary mb-3 title">Leak Repair</span>
+          <span className="text-primary mb-3 title1">Leak Repair</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -56,7 +56,7 @@ function Plumber() {
 
         {/* <!-- Drain Cleaning --> */}
         <section id="drain-cleaning" className="mb-5">
-          <span className="text-primary mb-3 title">Drain Cleaning</span>
+          <span className="text-primary mb-3 title1">Drain Cleaning</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -77,7 +77,7 @@ function Plumber() {
 
         {/* <!-- Water Heater Services --> */}
         <section id="water-heater" className="mb-5">
-          <span className="text-primary mb-3 title">Water Heater Services</span>
+          <span className="text-primary mb-3 title1">Water Heater Services</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -97,7 +97,7 @@ function Plumber() {
 
         {/* <!-- Fixture Installation --> */}
         <section id="fixture-installation" className="mb-5">
-          <span className="text-primary mb-3 title">Fixture Installation</span>
+          <span className="text-primary mb-3 title1">Fixture Installation</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -120,7 +120,7 @@ function Plumber() {
 
       {/* Buy Service */}
       <div className="container mt-4">
-        <span className="text-primary mb-3 title">Buy Service</span>
+        <span className="text-primary mb-3 title1">Buy Service</span>
         <div className="card">
           <div className="card-body">
             <div className="row">
@@ -213,7 +213,7 @@ function Plumber() {
 
       {/* Image Section */}
       <div className="container mt-4">
-        <h4 className="mb-3 title">Our Projects</h4>
+        <h4 className="mb-3 title1">Our Projects</h4>
         <div className="row">
           <div className="col-md-4 mb-3">
             <img

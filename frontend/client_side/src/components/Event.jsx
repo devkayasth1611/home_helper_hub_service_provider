@@ -9,12 +9,12 @@ function EventManager() {
           <div className="building_icon">
             <img className="img_title" src="../event.png" alt="Event Manager" />
           </div>
-          <span className="title">Event Ease</span>
+          <span className="title1">Event Ease</span>
         </div>
 
         {/* <!-- Wedding Planning --> */}
         <section id="wedding-planning" className="mb-5">
-          <span className="text-primary mb-3 title">Wedding Planning</span>
+          <span className="text-primary mb-3 title1">Wedding Planning</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -36,7 +36,7 @@ function EventManager() {
 
         {/* <!-- Corporate Events --> */}
         <section id="corporate-events" className="mb-5">
-          <span className="text-primary mb-3 title">Corporate Events</span>
+          <span className="text-primary mb-3 title1">Corporate Events</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -57,7 +57,7 @@ function EventManager() {
 
         {/* <!-- Private Parties --> */}
         <section id="private-parties" className="mb-5">
-          <span className="text-primary mb-3 title">Private Parties</span>
+          <span className="text-primary mb-3 title1">Private Parties</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -79,7 +79,7 @@ function EventManager() {
 
         {/* <!-- Music Festivals --> */}
         <section id="music-festivals" className="mb-5">
-          <span className="text-primary mb-3 title">Music Festivals</span>
+          <span className="text-primary mb-3 title1">Music Festivals</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -100,7 +100,7 @@ function EventManager() {
 
         {/* <!-- Buy Service --> */}
         <div className="container mt-4">
-          <span className="text-primary mb-3 title">Buy Service</span>
+          <span className="text-primary mb-3 title1">Buy Service</span>
           <div className="card">
             <div className="card-body">
               <div className="row">
@@ -189,7 +189,7 @@ function EventManager() {
 
         {/* Image Section */}
         <div className="container mt-4">
-          <h4 className="mb-3 title">Our Events</h4>
+          <h4 className="mb-3 title1">Our Events</h4>
           <div className="row">
             <div className="col-md-4 mb-3">
               <img

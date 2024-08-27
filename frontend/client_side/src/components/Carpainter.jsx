@@ -9,12 +9,12 @@ function Carpentry() {
           <div className="building_icon">
             <img className="img_title" src="../carpainter.png" alt="Carpentry Icon" />
           </div>
-          <span className="title">Master Carpenter</span>
+          <span className="title1">Master Carpenter</span>
         </div>
 
         {/* <!-- Residential Carpentry --> */}
         <section id="residential-carpentry" className="mb-5">
-          <span className="text-primary mb-3 title">Residential Carpentry</span>
+          <span className="text-primary mb-3 title1">Residential Carpentry</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -34,7 +34,7 @@ function Carpentry() {
 
         {/* <!-- Commercial Carpentry --> */}
         <section id="commercial-carpentry" className="mb-5">
-          <span className="text-primary mb-3 title">Commercial Carpentry</span>
+          <span className="text-primary mb-3 title1">Commercial Carpentry</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -54,7 +54,7 @@ function Carpentry() {
 
         {/* <!-- Custom Woodworking --> */}
         <section id="custom-woodworking" className="mb-5">
-          <span className="text-primary mb-3 title">Custom Woodworking</span>
+          <span className="text-primary mb-3 title1">Custom Woodworking</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -74,7 +74,7 @@ function Carpentry() {
 
         {/* <!-- Repair and Restoration --> */}
         <section id="repair-restoration" className="mb-5">
-          <span className="text-primary mb-3 title">Repair and Restoration</span>
+          <span className="text-primary mb-3 title1">Repair and Restoration</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -94,7 +94,7 @@ function Carpentry() {
 
         {/* <!-- Outdoor Carpentry --> */}
         <section id="outdoor-carpentry" className="mb-5">
-          <span className="text-primary mb-3 title">Outdoor Carpentry</span>
+          <span className="text-primary mb-3 title1">Outdoor Carpentry</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -114,7 +114,7 @@ function Carpentry() {
 
         {/* <!-- Eco-Friendly Carpentry --> */}
         <section id="eco-friendly-carpentry" className="mb-5">
-          <span className="text-primary mb-3 title">Eco-Friendly Carpentry</span>
+          <span className="text-primary mb-3 title1">Eco-Friendly Carpentry</span>
           <div className="row">
             <div className="col-md-6">
               <p>
@@ -134,7 +134,7 @@ function Carpentry() {
 
       {/* <!-- Book Service --> */}
       <div className="container mt-4">
-      <span className="text-primary mb-3 title">Buy Service</span>
+      <span className="text-primary mb-3 title1">Buy Service</span>
       <div className="card">
         <div className="card-body">
           <form>
@@ -207,7 +207,7 @@ function Carpentry() {
 
        {/* Image Gallery */}
        <div className="container mt-4">
-        <h4 className="mb-3 title">Our Projects</h4>
+        <h4 className="mb-3 title1">Our Projects</h4>
         <div className="row">
           <div className="col-md-4 mb-3">
             <img

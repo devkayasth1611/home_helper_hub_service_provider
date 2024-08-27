@@ -9,12 +9,12 @@ function Painter() {
           <div className="building_icon">
             <img className="img_title" src="../homepainter.png" />
           </div>
-          <span className="title">Painter Plus</span>
+          <span className="title1">Painter Plus</span>
         </div>
 
         {/* <!-- Interior Painting --> */}
         <section id="interior-painting" class="mb-5">
-          <span class="text-primary mb-3 title">Interior Painting</span>
+          <span class="text-primary mb-3 title1">Interior Painting</span>
           <div class="row">
             <div class="col-md-6">
               <p>
@@ -38,7 +38,7 @@ function Painter() {
 
         {/* <!-- Exterior Painting --> */}
         <section id="exterior-painting" class="mb-5">
-          <span class="text-primary mb-3 title">Exterior Painting</span>
+          <span class="text-primary mb-3 title1">Exterior Painting</span>
           <div class="row">
             <div class="col-md-6">
               <p>
@@ -59,7 +59,7 @@ function Painter() {
 
         {/* <!-- Decorative Painting --> */}
         <section id="decorative-painting" class="mb-5">
-          <span class="text-primary mb-3 title">Decorative Painting</span>
+          <span class="text-primary mb-3 title1">Decorative Painting</span>
           <div class="row">
             <div class="col-md-6">
               <p>
@@ -80,7 +80,7 @@ function Painter() {
 
         {/* <!-- Commercial Painting --> */}
         <section id="commercial-painting" class="mb-5">
-          <span class="text-primary mb-3 title">Commercial Painting</span>
+          <span class="text-primary mb-3 title1">Commercial Painting</span>
           <div class="row">
             <div class="col-md-6">
               <p>
@@ -103,7 +103,7 @@ function Painter() {
 
         {/* <!-- Specialty Painting --> */}
         <section id="specialty-painting" class="mb-5">
-          <span class="text-primary mb-3 title">Specialty Painting</span>
+          <span class="text-primary mb-3 title1">Specialty Painting</span>
           <div class="row">
             <div class="col-md-6">
               <p>
@@ -123,7 +123,7 @@ function Painter() {
 
         {/* <!-- Residential Painting --> */}
         <section id="residential-painting" class="mb-5">
-          <span class="text-primary mb-3 title">Residential Painting</span>
+          <span class="text-primary mb-3 title1">Residential Painting</span>
           <div class="row">
             <div class="col-md-6">
               <p>
@@ -144,7 +144,7 @@ function Painter() {
 
       {/* Buy Service */}
       <div className="container mt-4">
-      <span class="text-primary mb-3 title">Buy Service</span>
+      <span class="text-primary mb-3 title1">Buy Service</span>
         <div className="card">
           <div className="card-body">
             <div className="row">
@@ -283,7 +283,7 @@ function Painter() {
       </div>
       {/* image section */}
       <div className="container mt-4">
-      <h4 className="mb-3 title">Our Projects</h4>
+      <h4 className="mb-3 title1">Our Projects</h4>
       <div className="row">
         <div className="col-md-4 mb-3">
           <img
