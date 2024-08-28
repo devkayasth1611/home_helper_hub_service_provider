@@ -74,3 +74,8 @@ app.use("/users", userRoutes);
 
 const sendMail = require("./util/mailer");
 app.post("/sendMail", sendMail);
+
+
+const adminRoutes = require("./routes/adminRoutes");
+app.use("/admins", adminRoutes);
+
