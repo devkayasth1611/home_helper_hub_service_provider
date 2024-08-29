@@ -1,31 +1,49 @@
-import React from 'react'
-import "../App.css";
+import React from 'react';
+import '../App.css';
 
 function Appointment() {
   return (
-    <div>
-        <div className="contact_section layout_padding">
-         <div className="container-fluid">
-            <div className="contact_section_2 align">
-               <div className="row">
-                  <div className="col-md-6">
-                     <h1 className="contact_taital">Book Appointment</h1>
-                     <form action="">
-                        <div className="mail_section_1">
-                           <input type="text" className="mail_text" placeholder="Name" name="Name" />
-                           <input type="text" className="mail_text" placeholder="Phone Number" name="Phone Number" /> 
-                           <input type="text" className="mail_text" placeholder="Email" name="Email" />
-                           <textarea className="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                           <div className="send_bt"><a href="#">Book</a></div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
+    <div className="container">
+      <div className="card">
+        <div className="card-header text-center">
+          <h2 className='title1'>Service Appointment Form</h2>
+        </div>
+        <div className="card-body">
+          <form>
+            {/* Service Type */}
+            <div className="mb-3">
+              <label htmlFor="serviceType" className="form-label">Service Type</label>
+              <select className="form-select" id="serviceType" required>
+                <option value="" disabled selected>Select Service Type</option>
+                <option value="Cleaning">Cleaning</option>
+                <option value="Electrician">Electrician</option>
+                <option value="Plumbing">Plumbing</option>
+                <option value="Carpentry">Carpentry</option>
+                <option value="Painting">Painting</option>
+                <option value="Moving">Swift Move</option>
+                <option value="Event Management">Event Management</option>
+              </select>
             </div>
-         </div>
+
+            {/* Appointment Date */}
+            <div className="mb-3">
+              <label htmlFor="appointmentDate" className="form-label">Appointment Date</label>
+              <input type="date" className="form-control" id="appointmentDate" required />
+            </div>
+
+            {/* Additional Notes */}
+            <div className="mb-3">
+              <label htmlFor="notes" className="form-label">Additional Notes</label>
+              <textarea className="form-control" id="notes" rows="4" placeholder="Enter any additional notes" />
+            </div>
+
+            {/* Submit Button */}
+            <button type="submit" className="btn btn-primary w-100">Book Service</button>
+          </form>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Appointment
+export default Appointment;

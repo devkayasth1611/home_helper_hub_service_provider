@@ -270,7 +270,7 @@ button {
 .header_section {
     width: 100%; 
     float: left;
-    background-color: #f9b116;
+    background-color: rgba(249, 172, 5, 0.959);
     height: auto;
     background-size: 100%;
 }
@@ -346,7 +346,7 @@ button {
     background-image: url("../public/home.png");
     height: auto;
     opacity: 0.9;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: 100%;
     padding-bottom: 100px;
 }

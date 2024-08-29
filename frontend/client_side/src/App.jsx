@@ -15,6 +15,8 @@ import Mason from "./components/Mason";
 import SwiftMove from "./components/SwiftMove";
 import Electrician from "./components/electrician";
 import Event from "./components/Event";
+import Payment from "./pages/Payment";
+import Review from "./pages/Review";
 import "./App.css";
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
           <Route path="/SwiftMove" element={<SwiftMove />} />
           <Route path="/Electrician" element={<Electrician />} />
           <Route path="/Event" element={<Event />} />
+          <Route path="/Payment" element={<Payment />} />
+          <Route path="/Review" element={<Review />} />
         </Routes>
         <Footer />
       </Router>
