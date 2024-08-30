@@ -17,11 +17,11 @@ import Electrician from "./components/electrician";
 import Event from "./components/Event";
 import Payment from "./pages/Payment";
 import Review from "./pages/Review";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import "./App.css";
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
   return (
     <>
       <Router>
@@ -42,6 +42,8 @@ function App() {
           <Route path="/Event" element={<Event />} />
           <Route path="/Payment" element={<Payment />} />
           <Route path="/Review" element={<Review />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Register" element={<Register />} />
         </Routes>
         <Footer />
       </Router>
