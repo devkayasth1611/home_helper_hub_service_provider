@@ -1,13 +1,13 @@
-const addressSchema = require("../model/addressModel");
+const swiftMoveSchema = require("../model/swiftMoveModel");
 
-exports.addAddress = (req,res) => {
-  const address = new addressSchema(req.body);
-  address.save()
+exports.addSwiftMoveDetails = (req,res) => {
+  const swiftMove = new swiftMoveSchema(req.body);
+  swiftMove.save()
   .then((data) => {
       if(!data)
       {
           res.json({
-              message: "Something went wrong while adding the Address",
+              message: "Something went wrong while adding the Swift Move Details",
               status: 400,
               error: err,
           });
@@ -15,27 +15,27 @@ exports.addAddress = (req,res) => {
       else
       {
           res.json({
-              message: "Address add successfully",
+              message: "Swift Move Details add successfully",
               status: 200,
               data: data,
             });
       }
   }).catch((err)=>{
       res.json({
-          message: "Something went wrong while adding the Address",
+          message: "Something went wrong while adding the Swift Move Details",
           status: 400,
           error: err,
         });
   })
-}
+};
 
 
-exports.getAllAddress = (req,res) => {
-    addressSchema.find().then((data)=>{
+exports.getAllSwiftMove = (req,res) => {
+    swiftMoveSchema.find().then((data)=>{
         if(!data)
         {
             res.json({
-                message: "Something went wrong while fetching the Address",
+                message: "Something went wrong while fetching the Swift Move Details",
                 status: 400,
                 error: err,
               });
@@ -43,34 +43,35 @@ exports.getAllAddress = (req,res) => {
         else
         {
             res.json({
-                message: "Address fetched successfully",
+                message: "Swift Move Details fetching successfully",
                 status: 200,
                 data: data,
               });
         }
     }).catch((err)=>{
         res.json({
-            message: "Something went wrong while fetching the Address",
+            message: "Something went wrong while fetching the Swift Move Details",
             status: 400,
             error: err,
           });
     })
-}
+};
 
 
-exports.getAddressById = (req, res) => {
-  addressSchema
+exports.getSwiftMoveById = (req,res) => {
+  // const proId = req.params.id;
+     swiftMoveSchema
     .findById(req.params.id)
     .then((data) => {
       if (!data) {
         res.json({
-          message: "Something went wrong while fetching the Address",
+          message: "Something went wrong while fetching the Swift Move Details.",
           status: 400,
           error: err,
         });
       } else {
         res.json({
-          message: "Address fetched By Id successfully",
+          message: "Swift Move Details id fetched successfully.",
           status: 200,
           data: data,
         });
@@ -78,17 +79,15 @@ exports.getAddressById = (req, res) => {
     })
     .catch((err) => {
       res.json({
-        message: "Something went wrong while fetching the Address",
+        message: "Something went wrong while fetching the Swift Move Details.",
         status: 400,
         error: err,
       });
     });
 };
 
-
-
-exports.updateAddressById = (req, res) => {
-    addressSchema
+exports.updateSwiftMoveById = (req, res) => {
+       swiftMoveSchema
       .findOneAndUpdate(
         {
           _id: req.params.id,
@@ -98,13 +97,13 @@ exports.updateAddressById = (req, res) => {
       .then((data) => {
         if (!data) {
           res.json({
-            message: "Something went wrong while updating the Address",
+            message: "Something went wrong while updating the Swift Move Details",
             status: 400,
             error: err,
           });
         } else {
           res.json({
-            message: "Address updated successfully",
+            message: "Swift Move Details updated successfully",
             status: 200,
             data: data,
           });
@@ -112,7 +111,7 @@ exports.updateAddressById = (req, res) => {
       })
       .catch((err) => {
         res.json({
-          message: "Something went wrong while Updating the Address",
+          message: "Something went wrong while Updating the Swift Move Details",
           status: 400,
           error: err,
         });
@@ -120,10 +119,10 @@ exports.updateAddressById = (req, res) => {
   };
 
 
-  exports.deleteAddressById = (req, res) => {
+  exports.deleteSwiftMoveById = (req, res) => {
     const id = req.params.id;
     console.log(id);
-    addressSchema.findOneAndDelete(
+    swiftMoveSchema.findOneAndDelete(
       {
         _id: id,
       },
@@ -131,13 +130,13 @@ exports.updateAddressById = (req, res) => {
     .then((data) => {
       if (!data) {
         res.json({
-          message: "Something went wrong while deleting the Address",
+          message: "Something went wrong while deleteing the Swift Move Details",
           status: 400,
           error: err,
         });
       } else {
         res.json({
-          message: "Address deleted successfully",
+          message: "Swift Move Details deleted successfully",
           status: 200,
           data: data,
         });
@@ -145,7 +144,7 @@ exports.updateAddressById = (req, res) => {
     })
     .catch((err) => {
       res.json({
-        message: "Something went wrong while deleting the Address",
+        message: "Something went wrong while Deleting the Swift Move Details",
         status: 400,
         error: err,
       });

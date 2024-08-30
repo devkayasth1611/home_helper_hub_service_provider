@@ -47,9 +47,6 @@ app.post("/upload",upload,(req,res) =>{
 });
 
 
-const addressRoutes = require("./routes/addressRoutes");
-app.use("/addresses", addressRoutes);
-
 const appointmentRoutes = require("./routes/appointmentRoutes");
 app.use("/appointments", appointmentRoutes);
 
@@ -79,3 +76,26 @@ app.post("/sendMail", sendMail);
 const adminRoutes = require("./routes/adminRoutes");
 app.use("/admins", adminRoutes);
 
+const paintingRoutes = require("./routes/paintingRoutes");
+app.use("/paintings", paintingRoutes);
+
+const masonRoutes = require("./routes/masonRoutes");
+app.use("/masons", masonRoutes);
+
+const electricRoutes = require("./routes/electricRoutes");
+app.use("/electrics", electricRoutes);
+
+const cleaningRoutes = require("./routes/cleaningRoutes");
+app.use("/cleanings", cleaningRoutes);
+
+const carpenterRoutes = require("./routes/carpenterRoutes");
+app.use("/carpenters", carpenterRoutes);
+
+const plumberRoutes = require("./routes/plumberRoutes");
+app.use("/plumbers", plumberRoutes);
+
+const eventRoutes = require("./routes/eventRoutes");
+app.use("/events", eventRoutes);
+
+const swiftMoveRoutes = require("./routes/swiftMoveRoutes");
+app.use("/swiftMoves", swiftMoveRoutes);
