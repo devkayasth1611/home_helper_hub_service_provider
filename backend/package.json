@@ -1,9 +1,10 @@
 {
   "dependencies": {
     "express": "^4.19.2",
-    "mailer": "^0.6.7",
-    "mongoose": "^8.5.2",
+    "mailer": "^0.6.6",
+    "mongoose": "^8.6.0",
     "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.14",
     "nodemon": "^3.1.4",
     "zod": "^3.23.8"
   }

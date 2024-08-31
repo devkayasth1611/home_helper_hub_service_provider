@@ -1,27 +1,39 @@
 const mongoose = require("mongoose"); 
 const Schema = mongoose.Schema
-const AddressSchema = new  Schema(
+
+const PainterSchema = new  Schema(
     {
-        street:{
+        roomName:{
             type : String,
             required : true,
             trim : true,
         },
-        city:{
+        areaSize:{
+            type : Number,
+            required : true,
+            trim : true,
+        },
+        paintType:{
             type : String,
             required : true,
             trim : true,
         },
-        state:{
+        wallColors:{
             type : String,
             required : true,
             trim : true,
         },
-        postalCode:{
-            type :String,
+        noOfCoats:{
+            type : Number,
             required : true,
+            trim : true,
         },
-        country:{
+        paintFinish:{
+            type : String,
+            required : true,
+            trim : true,
+        },
+        additionalDetails:{
             type : String,
             required : true,
             trim : true,
@@ -39,4 +51,4 @@ const AddressSchema = new  Schema(
         timeStamps : true,
     }
 )
-module.exports = mongoose.model('Address',AddressSchema)
+module.exports = mongoose.model('Painter',PainterSchema)
