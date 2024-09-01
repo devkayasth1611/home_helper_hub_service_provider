@@ -160,7 +160,7 @@ function Carpentry() {
       </div>
 
       {/* <!-- Book Service --> */}
-      <div className="container mt-4">
+      {/* <div className="container mt-4">
       <span className="text-primary mb-3 title1">Buy Service</span>
       <div className="card">
         <div className="card-body">
@@ -230,7 +230,10 @@ function Carpentry() {
           </form>
         </div>
       </div>
-      </div>
+      </div> */}
+      <div className="col-md-2 mb-5">
+                  <button className="btn btn-primary" type="submit">ADD</button>
+                </div>
 
        {/* Image Gallery */}
        <div className="container mt-4">

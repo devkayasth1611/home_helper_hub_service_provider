@@ -274,9 +274,8 @@ function Electrician() {
           </div>
         </div>
 
-       
-        <div className="container mt-4">
         <span className="title1">Buy Service</span>
+        <div className="container mt-4">
           <div className="card">
             <div className="card-body">
               <div className="row">
@@ -401,7 +400,10 @@ function Electrician() {
               </button>
             </div>
           </div>
-        </div>
+        </div> 
+        <div className="col-md-2 mb-5">
+                  <button className="btn btn-primary" type="submit">ADD</button>
+                </div>
         {/* image section */}
         <div className="container mt-4">
           <h4 className="mb-3 title1">Our Projects</h4>
