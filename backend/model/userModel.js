@@ -17,6 +17,11 @@ const UserSchema = new  Schema(
             required : true,
             trim : true,
         },
+        confirmPassword:{
+            type : String,
+            required : true,
+            trim : true,
+        },
         firstName:{
             type :String,
             require : true,
@@ -36,16 +41,16 @@ const UserSchema = new  Schema(
             required : true,
             trim : true,
         },
-        userType:{
-            type : String,
-            required : true,
-            trim : true,
-        },
-        userProfilePicture:{
-            type : String,
-            required : true,
-            trim : true,
-        },
+        // userType:{
+        //     type : String,
+        //     required : true,
+        //     trim : true,
+        // },
+        // userProfilePicture:{
+        //     type : String,
+        //     required : true,
+        //     trim : true,
+        // },
         createdAt:{
             type : Date,
             default : Date.now,

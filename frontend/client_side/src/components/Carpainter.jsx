@@ -1,7 +1,34 @@
 import React from "react";
+import axios from "axios";
 import "../App.css";
 
 function Carpentry() {
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = {
+      serviceType: event.target.serviceType.value,
+      materialType: event.target.materialType.value,
+      projectSize: event.target.projectSize.value,
+      date: event.target.date.value,
+      time: event.target.time.value,
+      additionalDetails: event.target.additionalDetails.value,
+    };
+
+    try {
+      const response = await axios.post('http://localhost:3000/carpenters/carpenter', formData);
+      if (response.status === 200) {
+        alert('Carpenter data added successfully!');
+        window.location.reload();
+      } else {
+        alert('Error adding carpenter!');
+      }
+    } catch (error) {
+      console.error('There was an error!', error);
+    }
+  };
+
+
   return (
     <div>
       <div className="container">
@@ -137,7 +164,7 @@ function Carpentry() {
       <span className="text-primary mb-3 title1">Buy Service</span>
       <div className="card">
         <div className="card-body">
-          <form>
+        <form onSubmit={handleSubmit}>
             <div className="row mb-3">
               <div className="col-md-6">
                 <h5>Service Type</h5>
@@ -174,14 +201,14 @@ function Carpentry() {
               </div>
               <div className="col-md-6">
                 <h5>Preferred Date</h5>
-                <input type="date" className="form-control" id="preferredDate" required />
+                <input type="date" className="form-control" id="date" required />
               </div>
             </div>
 
             <div className="row mb-3">
               <div className="col-md-6">
                 <h5>Preferred Time</h5>
-                <input type="time" className="form-control" id="preferredTime" required />
+                <input type="time" className="form-control" id="time" required />
               </div>
             </div>
 

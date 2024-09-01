@@ -274,8 +274,9 @@ function Electrician() {
           </div>
         </div>
 
-        <span className="title1">Buy Service</span>
+       
         <div className="container mt-4">
+        <span className="title1">Buy Service</span>
           <div className="card">
             <div className="card-body">
               <div className="row">

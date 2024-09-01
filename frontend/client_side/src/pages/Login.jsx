@@ -1,16 +1,35 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import "../App.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const navigate = useNavigate(); // To navigate to different routes
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Add your login logic here
-    console.log("Login successful");
+    setError(null); // Reset error state
+
+    try {
+      const response = await axios.post("http://localhost:3000/logins/login", { email, password });
+      
+      // If login is successful
+      if (response.status === 200) {
+        alert("Login successful");
+        localStorage.setItem("token", response.data.token); // Store the token
+        navigate("/"); // Redirect to the dashboard or another protected route
+      }
+    } catch (err) {
+      // Handle errors
+      if (err.response && err.response.status === 400) {
+        setError(err.response.data.message); // Display validation error
+      } else {
+        setError("An unexpected error occurred");
+      }
+    }
   };
 
   return (

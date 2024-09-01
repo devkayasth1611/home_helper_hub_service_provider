@@ -1,8 +1,8 @@
 const carpenterSchema = require("../model/carpenterModel");
 
-exports.addCarpenterDetails = (req,res) => {
+exports.addCarpenterDetails = async(req,res) => {
   const carpenter = new carpenterSchema(req.body);
-  carpenter.save()
+  await carpenter.save()
   .then((data) => {
       if(!data)
       {

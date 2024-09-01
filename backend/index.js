@@ -1,8 +1,12 @@
 const express = require("express"); // creating the server
+const cors = require('cors');
 const app = express();
 
 const mongoose = require("mongoose"); // For Connecting to Database
 
+app.use(cors({
+  origin: 'http://localhost:5173' // Adjust the port if Vite runs on a different port
+}));
 app.use(express.json()); // middleware
 app.use(express.urlencoded({ extended: false })); // middleware
 
@@ -99,3 +103,6 @@ app.use("/events", eventRoutes);
 
 const swiftMoveRoutes = require("./routes/swiftMoveRoutes");
 app.use("/swiftMoves", swiftMoveRoutes);
+
+const login = require("./routes/login");
+app.use("/logins", login);

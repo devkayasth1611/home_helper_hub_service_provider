@@ -1,28 +1,32 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import "../App.css";
 
 const Register = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState(null);
-
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!name || !email || !password || !confirmPassword) {
-      setError("Please fill in all fields");
-    } else if (password !== confirmPassword) {
-      setError("Passwords do not match");
-    } else {
-      try {
-        // Add your registration logic here
-        console.log("Registration successful");
-      } catch (error) {
-        console.error("Error during registration:", error);
-        setError("An error occurred during registration");
+    const formData = {
+      userName: event.target.userName.value,
+      email: event.target.email.value,
+      password: event.target.password.value,
+      confirmPassword: event.target.confirmPassword.value,
+      firstName: event.target.firstName.value,
+      lastName: event.target.lastName.value,
+      phoneNumber: event.target.phoneNumber.value,
+      address: event.target.address.value,
+    };
+
+    try {
+      const response = await axios.post('http://localhost:3000/users/user', formData);
+      if (response.status === 200) {
+        alert('Registered successfully!');
+        window.location.reload();
+      } else {
+        alert('Error while Register!');
       }
+    } catch (error) {
+      console.error('There was an error!', error);
     }
   };
 
@@ -38,9 +42,8 @@ const Register = () => {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Full Name"
-                    value={name}
-                    onChange={(event) => setName(event.target.value)}
+                    placeholder="User Name"
+                    id="userName"
                   />
                 </div>
                 <div className="mb-3">
@@ -48,8 +51,7 @@ const Register = () => {
                     type="email"
                     className="form-control"
                     placeholder="Email"
-                    value={email}
-                    onChange={(event) => setEmail(event.target.value)}
+                    id="email"
                   />
                 </div>
                 <div className="mb-3">
@@ -57,8 +59,7 @@ const Register = () => {
                     type="password"
                     className="form-control"
                     placeholder="Password"
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
+                    id="password"
                   />
                 </div>
                 <div className="mb-3">
@@ -66,11 +67,41 @@ const Register = () => {
                     type="password"
                     className="form-control"
                     placeholder="Confirm Password"
-                    value={confirmPassword}
-                    onChange={(event) => setConfirmPassword(event.target.value)}
+                    id="confirmPassword"
                   />
                 </div>
-                {error && <div className="alert alert-danger">{error}</div>}
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="First Name"
+                    id="firstName"
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Last Name"
+                    id="lastName"
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="number"
+                    className="form-control"
+                    placeholder="Phone Number"
+                    id="phoneNumber"
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="address"
+                    id="address"
+                  />
+                </div>
                 <button type="submit" className="btn btn-primary btn-block">
                   Register
                 </button>

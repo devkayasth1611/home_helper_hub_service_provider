@@ -190,8 +190,6 @@ function Cleaning() {
                     </label>
                   </div>
                 </div>
-
-                {/* Room Types */}
                 <div className="col-md-6">
                   <h4>Room Types</h4>
                   <div className="form-check">
@@ -251,8 +249,6 @@ function Cleaning() {
                   </div>
                 </div>
               </div>
-
-              {/* Area Size and Number of Rooms */}
               <div className="row mt-3">
                 <div className="col-md-6">
                   <h4>Area Size (sq ft)</h4>
@@ -273,8 +269,6 @@ function Cleaning() {
                   />
                 </div>
               </div>
-
-              {/* Preferred Service Date and Time */}
               <div className="row mt-3">
                 <div className="col-md-6">
                   <h4>Preferred Service Date</h4>
@@ -293,8 +287,6 @@ function Cleaning() {
                   />
                 </div>
               </div>
-
-              {/* Cleaning Type and Frequency */}
               <div className="row mt-3">
                 <div className="col-md-6">
                   <h4>Cleaning Type</h4>
@@ -321,8 +313,6 @@ function Cleaning() {
                   </select>
                 </div>
               </div>
-
-              {/* Additional Details */}
               <div className="row mt-3">
                 <div className="col-md-12">
                   <h4>Additional Details</h4>
@@ -334,8 +324,6 @@ function Cleaning() {
                   ></textarea>
                 </div>
               </div>
-
-              {/* Submit Button */}
               <button type="submit" className="btn btn-primary mt-3">
                 Buy Now
               </button>
