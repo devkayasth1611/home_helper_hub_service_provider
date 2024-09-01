@@ -135,15 +135,15 @@ function Cleaning() {
       </div>
 
       {/* Buy Service Form */}
-      <div className="container mt-4">
+      {/* <div className="container mt-4">
         <span className="text-primary mb-3 title1">Buy Service</span>
         <div className="card">
           <div className="card-body">
-            <form>
+            <form> */}
               {/* Service Type and Room Types */}
-              <div className="row">
+              {/* <div className="row"> */}
                 {/* Service Type */}
-                <div className="col-md-6">
+                {/* <div className="col-md-6">
                   <h4>Service Type</h4>
                   <div className="form-check">
                     <input
@@ -189,10 +189,10 @@ function Cleaning() {
                       Emergency
                     </label>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Room Types */}
-                <div className="col-md-6">
+                {/* <div className="col-md-6">
                   <h4>Room Types</h4>
                   <div className="form-check">
                     <input
@@ -250,10 +250,10 @@ function Cleaning() {
                     </label>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Area Size and Number of Rooms */}
-              <div className="row mt-3">
+              {/* <div className="row mt-3">
                 <div className="col-md-6">
                   <h4>Area Size (sq ft)</h4>
                   <input
@@ -275,7 +275,7 @@ function Cleaning() {
               </div>
 
               {/* Preferred Service Date and Time */}
-              <div className="row mt-3">
+              {/* <div className="row mt-3">
                 <div className="col-md-6">
                   <h4>Preferred Service Date</h4>
                   <input
@@ -292,10 +292,10 @@ function Cleaning() {
                     id="serviceTime"
                   />
                 </div>
-              </div>
+              </div> */}
 
               {/* Cleaning Type and Frequency */}
-              <div className="row mt-3">
+              {/* <div className="row mt-3">
                 <div className="col-md-6">
                   <h4>Cleaning Type</h4>
                   <select className="form-select" id="cleaningType">
@@ -320,10 +320,10 @@ function Cleaning() {
                     <option value="monthly">Monthly</option>
                   </select>
                 </div>
-              </div>
+              </div> */}
 
               {/* Additional Details */}
-              <div className="row mt-3">
+              {/* <div className="row mt-3">
                 <div className="col-md-12">
                   <h4>Additional Details</h4>
                   <textarea
@@ -333,16 +333,19 @@ function Cleaning() {
                     placeholder="Provide any additional details"
                   ></textarea>
                 </div>
-              </div>
+              </div> */}
 
               {/* Submit Button */}
-              <button type="submit" className="btn btn-primary mt-3">
+              {/* <button type="submit" className="btn btn-primary mt-3">
                 Buy Now
               </button>
             </form>
           </div>
         </div>
-      </div>
+      </div> */}
+      <div className="col-md-2 mb-5">
+                  <button className="btn btn-primary" type="submit">ADD</button>
+                </div>
 
       {/* Image Gallery */}
       <div className="container mt-4">

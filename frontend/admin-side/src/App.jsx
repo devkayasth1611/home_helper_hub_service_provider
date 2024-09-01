@@ -27,9 +27,6 @@ import PaymentTable from './Component/PaymentTable';
 import ReviewForm from './Component/ReviewForm';
 import ReviewTable from './Component/ReviewTable';
 
-
-
-
 function App() {
   
 

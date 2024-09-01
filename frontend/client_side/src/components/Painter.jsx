@@ -142,7 +142,7 @@ function Painter() {
         </section>
       </div>
 
-      {/* Buy Service */}
+      {/* Buy Service
       <div className="container mt-4">
       <span class="text-primary mb-3 title1">Buy Service</span>
         <div className="card">
@@ -280,7 +280,10 @@ function Painter() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
+      <div className="col-md-2 mb-5">
+                  <button className="btn btn-primary" type="submit">ADD</button>
+                </div>
       {/* image section */}
       <div className="container mt-4">
       <h4 className="mb-3 title1">Our Projects</h4>

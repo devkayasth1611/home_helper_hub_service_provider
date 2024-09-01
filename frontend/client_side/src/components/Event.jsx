@@ -99,7 +99,7 @@ function EventManager() {
         </section>
 
         {/* <!-- Buy Service --> */}
-        <div className="container mt-4">
+        {/* <div className="container mt-4">
           <span className="text-primary mb-3 title1">Buy Service</span>
           <div className="card">
             <div className="card-body">
@@ -185,7 +185,10 @@ function EventManager() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
+        <div className="col-md-2 mb-5">
+                  <button className="btn btn-primary" type="submit">ADD</button>
+                </div>
 
         {/* Image Section */}
         <div className="container mt-4">
