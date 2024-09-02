@@ -1,8 +1,33 @@
 import React from 'react'
 import "../App.css"
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 function AdminForm() {
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = {
+      adminName: event.target.adminName.value,
+      email: event.target.email.value,
+      password: event.target.password.value,
+      phoneNumber: event.target.phoneNumber.value,
+      
+    };
+
+    try {
+      const response = await axios.post('http://localhost:3000/admins/admin', formData);
+      if (response.status === 200) {
+        alert('Admin data added successfully!');
+        window.location.reload();
+      } else {
+        alert('Error adding Admin!');
+      }
+    } catch (error) {
+      console.error('There was an error!', error);
+    }
+  };
+
   return (
     <div>
         <main id="main" className="main">
@@ -25,22 +50,22 @@ function AdminForm() {
     <h5 className="card-title">Admin Form</h5>
 
     {/* <!-- Vertical Form --> */}
-    <form className="row g-3">
+    <form className="row g-3" onSubmit={handleSubmit}>
       <div className="col-12">
         <label for="inputName" className="form-label">Admin Name</label>
-        <input type="text" className="form-control" id="inputName" placeholder='Enter User Name'/>
+        <input type="text" className="form-control" id="adminName" placeholder='Enter User Name'/>
       </div>
       <div className="col-12">
         <label for="inputEmail4" className="form-label">Email</label>
-        <input type="email" className="form-control" id="inputEmail" placeholder='Enter Email'/>
+        <input type="email" className="form-control" id="email" placeholder='Enter Email'/>
       </div>
       <div className="col-12">
         <label for="inputPassword4" className="form-label">Password</label>
-        <input type="password" className="form-control" id="inputpassword" placeholder='Enter password'/>
+        <input type="password" className="form-control" id="password" placeholder='Enter password'/>
       </div>
       <div className="col-12">
         <label for="inputNumber" className="form-label">Phone Number</label>
-        <input type="text" className="form-control" id="inputAddress" placeholder="Enter Phone Number"/>
+        <input type="text" className="form-control" id="phoneNumber" placeholder="Enter Phone Number"/>
       </div>
       <div className="text-center">
         <button type="submit" className="btn btn-primary">Add</button>

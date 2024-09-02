@@ -1,8 +1,38 @@
 import React from 'react'
 import "../App.css"
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 function UserForm() {
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = {
+      userName: event.target.userName.value,
+      email: event.target.email.value,
+      password: event.target.password.value,
+      confirmPassword: event.target.confirmPassword.value,
+      firstName: event.target.firstName.value,
+      lastName: event.target.lastName.value,
+      phoneNumber: event.target.phoneNumber.value,
+      address: event.target.address.value,
+      
+      
+    };
+
+    try {
+      const response = await axios.post('http://localhost:3000/users/user', formData);
+      if (response.status === 200) {
+        alert('User data added successfully!');
+        window.location.reload();
+      } else {
+        alert('Error adding User!');
+      }
+    } catch (error) {
+      console.error('There was an error!', error);
+    }
+  };
+
   return (
     <div>
         <main id="main" className="main">
@@ -28,55 +58,42 @@ function UserForm() {
     <h5 className="card-title">User Form</h5>
 
     {/* <!-- Browser Default Validation --> */}
-              <form className="row g-3">
+              <form className="row g-3" onSubmit={handleSubmit}>
               <div className="col-12">
         <label for="inputName" className="form-label">User Name</label>
-        <input type="text" className="form-control" id="inputName" placeholder='Enter User Name'/>
+        <input type="text" className="form-control" id="userName" placeholder='Enter User Name'/>
       </div>
       <div className="col-12">
         <label for="inputEmail4" className="form-label">Email</label>
-        <input type="email" className="form-control" id="inputEmail" placeholder='Enter Email'/>
+        <input type="email" className="form-control" id="email" placeholder='Enter Email'/>
       </div>
       <div className="col-12">
         <label for="inputPassword4" className="form-label">Password</label>
-        <input type="password" className="form-control" id="inputpassword" placeholder='Enter password'/>
+        <input type="password" className="form-control" id="password" placeholder='Enter password'/>
+      </div>
+      <div className="col-12">
+        <label for="inputPassword4" className="form-label">confirmPassword</label>
+        <input type="password" className="form-control" id="confirmPassword" placeholder='Enter password'/>
       </div>
                 <div className="col-md-4">
                   <label for="validationDefault01" className="form-label">First name</label>
-                  <input type="text" className="form-control" id="validationDefault01" placeholder='Enter First Name'/>
+                  <input type="text" className="form-control" id="firstName" placeholder='Enter First Name'/>
                 </div>
                 <div className="col-md-4">
                   <label for="validationDefault02" className="form-label">Last name</label>
-                  <input type="text" className="form-control" id="validationDefault02" placeholder='Enter Last Name'/>
+                  <input type="text" className="form-control" id="lastName" placeholder='Enter Last Name'/>
                 </div>
                 <div className="col-12">
+        <label for="inputName" className="form-label">Phone Number</label>
+        <input type="text" className="form-control" id="phoneNumber" placeholder='Enter phone Number'/>
+      </div>
+                <div className="col-12">
                   <label for="inputAddress5" className="form-label">Address</label>
-                  <input type="text" className="form-control" id="inputAddres5s" placeholder="1234 Main St"/>
+                  <input type="text" className="form-control" id="address" placeholder="1234 Main St"/>
                 </div>
                
-                <div className="col-md-6">
-                  <label for="inputCity" className="form-label">City</label>
-                  <input type="text" className="form-control" id="inputCity" placeholder='Enter your City'/>
-                </div>
-                <div class="col-md-4"/>
-                  <label for="inputState" className="form-label">State</label>
-                  <select id="inputState" className="form-select">
-                    <option selected>Gujrat</option>
-                    <option>Gujrat</option>
-                    <option>Madhya Pradesh</option>
-                    <option>Uttar Pradesh</option>
-                    <option>Rajasthan</option>
-                    <option>Andhra Pradesh</option>
-                    <option>Goa</option>
-                    <option>Maharashtra</option>
-                    <option>Sikkim</option>
-                    <option> Chhattisgarh</option>
-
-                  </select>
-                  <div className="col-md-2">
-                  <label for="inputZip" className="form-label">Zip</label>
-                  <input type="text" className="form-control" id="inputZip" placeholder='Enter zip'/>
-                </div>
+                
+              
                 <div className="col-12">
                   <div className="form-check">
                     <input className="form-check-input" type="checkbox" id="gridCheck"/>
