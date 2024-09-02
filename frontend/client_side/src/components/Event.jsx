@@ -19,8 +19,9 @@ function EventManager() {
             <div className="col-md-6">
               <p>
                 Involves organizing and coordinating all aspects of a wedding,
-                including venue selection, catering, decoration, and more. Tailored
-                to the couple’s preferences to create a memorable event.
+                including venue selection, catering, decoration, and more.
+                Tailored to the couple’s preferences to create a memorable
+                event.
               </p>
             </div>
             <div className="col-md-6">
@@ -40,8 +41,9 @@ function EventManager() {
           <div className="row">
             <div className="col-md-6">
               <p>
-                Focuses on organizing events for businesses, including conferences,
-                meetings, product launches, and team-building activities.
+                Focuses on organizing events for businesses, including
+                conferences, meetings, product launches, and team-building
+                activities.
               </p>
             </div>
             <div className="col-md-6">
@@ -62,8 +64,8 @@ function EventManager() {
             <div className="col-md-6">
               <p>
                 Specializes in planning and executing private parties such as
-                birthdays, anniversaries, and other celebrations. Personalized to
-                suit the client's style and preferences.
+                birthdays, anniversaries, and other celebrations. Personalized
+                to suit the client's style and preferences.
               </p>
             </div>
             <div className="col-md-6">
@@ -96,99 +98,12 @@ function EventManager() {
               </ul>
             </div>
           </div>
-        </section>
-
-        {/* <!-- Buy Service --> */}
-        {/* <div className="container mt-4">
-          <span className="text-primary mb-3 title1">Buy Service</span>
-          <div className="card">
-            <div className="card-body">
-              <div className="row">
-                <div className="col-md-6">
-                  <h4>Event Type</h4>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="wedding"
-                      value="Wedding"
-                    />
-                    <label className="form-check-label" htmlFor="wedding">
-                      Wedding
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="corporateEvent"
-                      value="Corporate Event"
-                    />
-                    <label className="form-check-label" htmlFor="corporateEvent">
-                      Corporate Event
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="privateParty"
-                      value="Private Party"
-                    />
-                    <label className="form-check-label" htmlFor="privateParty">
-                      Private Party
-                    </label>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <h4>Event Date</h4>
-                  <input
-                    type="date"
-                    className="form-control"
-                    id="eventDate"
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-6">
-                  <h4>Number of Guests</h4>
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="guestCount"
-                    placeholder="Enter the number of guests"
-                  />
-                </div>
-                <div className="col-md-6">
-                  <h4>Venue Location</h4>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="venueLocation"
-                    placeholder="Enter the venue location"
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-12">
-                  <h4>Additional Details</h4>
-                  <textarea
-                    className="form-control"
-                    id="additionalDetails"
-                    rows="3"
-                    placeholder="Provide any additional details"
-                  ></textarea>
-                </div>
-              </div>
-              <button type="submit" className="btn btn-primary mt-3">
-                Book Now
-              </button>
-            </div>
+          <div className="col-md-2 mb-5">
+            <button className="btn btn-primary" type="submit">
+              ADD
+            </button>
           </div>
-        </div> */}
-        <div className="col-md-2 mb-5">
-                  <button className="btn btn-primary" type="submit">ADD</button>
-                </div>
+        </section>
 
         {/* Image Section */}
         <div className="container mt-4">

@@ -23,7 +23,8 @@ function Cleaning() {
           <div className="row">
             <div className="col-md-6">
               <p>
-                Comprehensive cleaning services for homes and residential properties, ensuring a clean and healthy living environment.
+                Comprehensive cleaning services for homes and residential
+                properties, ensuring a clean and healthy living environment.
               </p>
             </div>
             <div className="col-md-6">
@@ -43,7 +44,9 @@ function Cleaning() {
           <div className="row">
             <div className="col-md-6">
               <p>
-                Professional cleaning services tailored for businesses and commercial spaces to maintain a pristine and inviting environment.
+                Professional cleaning services tailored for businesses and
+                commercial spaces to maintain a pristine and inviting
+                environment.
               </p>
             </div>
             <div className="col-md-6">
@@ -63,7 +66,8 @@ function Cleaning() {
           <div className="row">
             <div className="col-md-6">
               <p>
-                Specialized cleaning services using advanced techniques and equipment to address specific cleaning needs.
+                Specialized cleaning services using advanced techniques and
+                equipment to address specific cleaning needs.
               </p>
             </div>
             <div className="col-md-6">
@@ -79,11 +83,14 @@ function Cleaning() {
 
         {/* Emergency Cleaning Services */}
         <section id="emergency-cleaning" className="mb-5">
-          <span className="text-primary mb-3 title1">Emergency Cleaning Services</span>
+          <span className="text-primary mb-3 title1">
+            Emergency Cleaning Services
+          </span>
           <div className="row">
             <div className="col-md-6">
               <p>
-                Immediate response cleaning services for unexpected situations requiring urgent attention.
+                Immediate response cleaning services for unexpected situations
+                requiring urgent attention.
               </p>
             </div>
             <div className="col-md-6">
@@ -98,11 +105,14 @@ function Cleaning() {
 
         {/* Consultation and Design Services */}
         <section id="consultation-design" className="mb-5">
-          <span className="text-primary mb-3 title1">Consultation and Design Services</span>
+          <span className="text-primary mb-3 title1">
+            Consultation and Design Services
+          </span>
           <div className="row">
             <div className="col-md-6">
               <p>
-                Expert advice and customized plans to ensure your cleaning needs are effectively met.
+                Expert advice and customized plans to ensure your cleaning needs
+                are effectively met.
               </p>
             </div>
             <div className="col-md-6">
@@ -120,7 +130,8 @@ function Cleaning() {
           <div className="row">
             <div className="col-md-6">
               <p>
-                Extra services to complement your cleaning needs and enhance your living or working space.
+                Extra services to complement your cleaning needs and enhance
+                your living or working space.
               </p>
             </div>
             <div className="col-md-6">
@@ -131,250 +142,13 @@ function Cleaning() {
               </ul>
             </div>
           </div>
+          <div className="col-md-2 mb-5">
+            <button className="btn btn-primary" type="submit">
+              Add Service
+            </button>
+          </div>
         </section>
       </div>
-
-      {/* Buy Service Form */}
-      {/* <div className="container mt-4">
-        <span className="text-primary mb-3 title1">Buy Service</span>
-        <div className="card">
-          <div className="card-body">
-            <form> */}
-              {/* Service Type and Room Types */}
-              {/* <div className="row"> */}
-                {/* Service Type */}
-                {/* <div className="col-md-6">
-                  <h4>Service Type</h4>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="residential"
-                      value="Residential"
-                    />
-                    <label className="form-check-label" htmlFor="residential">
-                      Residential
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="commercial"
-                      value="Commercial"
-                    />
-                    <label className="form-check-label" htmlFor="commercial">
-                      Commercial
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="specialty"
-                      value="Specialty"
-                    />
-                    <label className="form-check-label" htmlFor="specialty">
-                      Specialty
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="emergency"
-                      value="Emergency"
-                    />
-                    <label className="form-check-label" htmlFor="emergency">
-                      Emergency
-                    </label>
-                  </div>
-<<<<<<< HEAD
-                </div>
-                <div className="col-md-6">
-=======
-                </div> */}
-
-                {/* Room Types */}
-                {/* <div className="col-md-6">
->>>>>>> df7ddee2de5d03dc18272c04e8ab7a0042beb21d
-                  <h4>Room Types</h4>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="livingRoom"
-                      value="Living Room"
-                    />
-                    <label className="form-check-label" htmlFor="livingRoom">
-                      Living Room
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="bedroom"
-                      value="Bedroom"
-                    />
-                    <label className="form-check-label" htmlFor="bedroom">
-                      Bedroom
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="kitchen"
-                      value="Kitchen"
-                    />
-                    <label className="form-check-label" htmlFor="kitchen">
-                      Kitchen
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="bathroom"
-                      value="Bathroom"
-                    />
-                    <label className="form-check-label" htmlFor="bathroom">
-                      Bathroom
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="office"
-                      value="Office"
-                    />
-                    <label className="form-check-label" htmlFor="office">
-                      Office
-                    </label>
-                  </div>
-                </div>
-<<<<<<< HEAD
-              </div>
-              <div className="row mt-3">
-=======
-              </div> */}
-
-              {/* Area Size and Number of Rooms */}
-              {/* <div className="row mt-3">
->>>>>>> df7ddee2de5d03dc18272c04e8ab7a0042beb21d
-                <div className="col-md-6">
-                  <h4>Area Size (sq ft)</h4>
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="areaSize"
-                    placeholder="Enter the area size in square feet"
-                  />
-                </div>
-                <div className="col-md-6">
-                  <h4>Number of Rooms</h4>
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="rooms"
-                    placeholder="Enter the number of rooms"
-                  />
-                </div>
-              </div>
-<<<<<<< HEAD
-              <div className="row mt-3">
-=======
-
-              {/* Preferred Service Date and Time */}
-              {/* <div className="row mt-3">
->>>>>>> df7ddee2de5d03dc18272c04e8ab7a0042beb21d
-                <div className="col-md-6">
-                  <h4>Preferred Service Date</h4>
-                  <input
-                    type="date"
-                    className="form-control"
-                    id="serviceDate"
-                  />
-                </div>
-                <div className="col-md-6">
-                  <h4>Preferred Service Time</h4>
-                  <input
-                    type="time"
-                    className="form-control"
-                    id="serviceTime"
-                  />
-                </div>
-<<<<<<< HEAD
-              </div>
-              <div className="row mt-3">
-=======
-              </div> */}
-
-              {/* Cleaning Type and Frequency */}
-              {/* <div className="row mt-3">
->>>>>>> df7ddee2de5d03dc18272c04e8ab7a0042beb21d
-                <div className="col-md-6">
-                  <h4>Cleaning Type</h4>
-                  <select className="form-select" id="cleaningType">
-                    <option value="" disabled selected>
-                      Select type of cleaning
-                    </option>
-                    <option value="standard">Standard Cleaning</option>
-                    <option value="deep">Deep Cleaning</option>
-                    <option value="moveInMoveOut">Move-In/Move-Out Cleaning</option>
-                    <option value="postConstruction">Post-Construction Cleaning</option>
-                  </select>
-                </div>
-                <div className="col-md-6">
-                  <h4>Frequency</h4>
-                  <select className="form-select" id="frequency">
-                    <option value="" disabled selected>
-                      Select frequency
-                    </option>
-                    <option value="oneTime">One-Time</option>
-                    <option value="weekly">Weekly</option>
-                    <option value="biWeekly">Bi-Weekly</option>
-                    <option value="monthly">Monthly</option>
-                  </select>
-                </div>
-<<<<<<< HEAD
-              </div>
-              <div className="row mt-3">
-=======
-              </div> */}
-
-              {/* Additional Details */}
-              {/* <div className="row mt-3">
->>>>>>> df7ddee2de5d03dc18272c04e8ab7a0042beb21d
-                <div className="col-md-12">
-                  <h4>Additional Details</h4>
-                  <textarea
-                    className="form-control"
-                    id="additionalDetails"
-                    rows="3"
-                    placeholder="Provide any additional details"
-                  ></textarea>
-                </div>
-<<<<<<< HEAD
-              </div>
-              <button type="submit" className="btn btn-primary mt-3">
-=======
-              </div> */}
-
-              {/* Submit Button */}
-              {/* <button type="submit" className="btn btn-primary mt-3">
->>>>>>> df7ddee2de5d03dc18272c04e8ab7a0042beb21d
-                Buy Now
-              </button>
-            </form>
-          </div>
-        </div>
-      </div> */}
-      <div className="col-md-2 mb-5">
-                  <button className="btn btn-primary" type="submit">ADD</button>
-                </div>
 
       {/* Image Gallery */}
       <div className="container mt-4">

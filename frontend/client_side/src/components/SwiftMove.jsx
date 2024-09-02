@@ -7,7 +7,11 @@ function SwiftMove() {
       <div className="container">
         <div className="center_text">
           <div className="moving_icon">
-            <img className="img_title" src="../pack.png" alt="Swift Move Icon" />
+            <img
+              className="img_title"
+              src="../pack.png"
+              alt="Swift Move Icon"
+            />
           </div>
           <span className="title1">Swift Move</span>
         </div>
@@ -90,100 +94,12 @@ function SwiftMove() {
               </ul>
             </div>
           </div>
-        </section>
-
-        {/* Buy Service */}
-        {/* <div className="container mt-4">
-          <span className="text-primary mb-3 title1">Buy Service</span>
-          <div className="card">
-            <div className="card-body">
-              <div className="row">
-                <div className="col-md-6">
-                  <h4>Type of Move</h4>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="localMove"
-                      value="Local Move"
-                    />
-                    <label className="form-check-label" htmlFor="localMove">
-                      Local Move
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="longDistanceMove"
-                      value="Long Distance Move"
-                    />
-                    <label className="form-check-label" htmlFor="longDistanceMove">
-                      Long Distance Move
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="officeMove"
-                      value="Office Move"
-                    />
-                    <label className="form-check-label" htmlFor="officeMove">
-                      Office Move
-                    </label>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <h4>Number of Rooms</h4>
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="numberOfRooms"
-                    placeholder="Enter the number of rooms"
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-6">
-                  <h4>Estimated Weight (kg)</h4>
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="estimatedWeight"
-                    placeholder="Enter the estimated weight in kilograms"
-                  />
-                </div>
-                <div className="col-md-6">
-                  <h4>Additional Services</h4>
-                  <select className="form-select" id="additionalServices">
-                    <option selected>Select additional services</option>
-                    <option value="packing">Packing</option>
-                    <option value="storage">Storage</option>
-                    <option value="insurance">Insurance</option>
-                  </select>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-12">
-                  <h4>Additional Details</h4>
-                  <textarea
-                    className="form-control"
-                    id="additionalDetails"
-                    rows="3"
-                    placeholder="Provide any additional details"
-                  ></textarea>
-                </div>
-              </div>
-              <button type="submit" className="btn btn-primary mt-3">
-                Book Now
-              </button>
-            </div>
+          <div className="col-md-2 mb-5">
+            <button className="btn btn-primary" type="submit">
+              Add Service
+            </button>
           </div>
-        </div> */}
-        <div className="col-md-2 mb-5">
-                  <button className="btn btn-primary" type="submit">ADD</button>
-                </div>
+        </section>
 
         {/* Image Section */}
         <div className="container mt-4">
