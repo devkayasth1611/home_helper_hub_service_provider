@@ -1,126 +1,76 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import "../App.css";
 
 function CleaningAppointment() {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = {
+      serviceType: event.target.serviceType.value,
+      roomType: event.target.roomType.value,
+      areaSize: event.target.areaSize.value,
+      noOfRooms: event.target.noOfRooms.value,
+      // date: event.target.date.value,
+      // time: event.target.time.value,
+      cleaningType: event.target.cleaningType.value,
+      frequency: event.target.frequency.value,
+      additionalDetails: event.target.additionalDetails.value,
+    };
+
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/cleanings/cleaning",
+        formData
+      );
+      if (response.status === 200) {
+        alert("Cleaning data added successfully!");
+        window.location.reload();
+      } else {
+        alert("Error adding cleaning!");
+      }
+    } catch (error) {
+      console.error("There was an error!", error);
+    }
+  };
+
   return (
     <div className="container mt-4">
       <span className="text-primary mb-3 title1">Buy Service</span>
       <div className="card">
         <div className="card-body">
-          <form>
-            <div className="row">
+          <form onSubmit={handleSubmit}>
+            <diallv className="row">
               {/* Service Type */}
               <div className="col-md-6">
-                <h4>Service Type</h4>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="residential"
-                    value="Residential"
-                  />
-                  <label className="form-check-label" htmlFor="residential">
-                    Residential
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="commercial"
-                    value="Commercial"
-                  />
-                  <label className="form-check-label" htmlFor="commercial">
-                    Commercial
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="specialty"
-                    value="Specialty"
-                  />
-                  <label className="form-check-label" htmlFor="specialty">
-                    Specialty
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="emergency"
-                    value="Emergency"
-                  />
-                  <label className="form-check-label" htmlFor="emergency">
-                    Emergency
-                  </label>
-                </div>
+                <h4>Cleaning Type</h4>
+                <select className="form-select" id="serviceType">
+                  <option value="" disabled selected>
+                    Select type of cleaning
+                  </option>
+                  <option value="Residental">Residential</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Specilaity">Speciality</option>
+                  <option value="Emergency">Emergency</option>
+                </select>
               </div>
-              <div className="col-md-6"></div>
 
               {/* Room Types */}
               <div className="col-md-6">
                 <h4>Room Types</h4>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="livingRoom"
-                    value="Living Room"
-                  />
-                  <label className="form-check-label" htmlFor="livingRoom">
-                    Living Room
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="bedroom"
-                    value="Bedroom"
-                  />
-                  <label className="form-check-label" htmlFor="bedroom">
-                    Bedroom
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="kitchen"
-                    value="Kitchen"
-                  />
-                  <label className="form-check-label" htmlFor="kitchen">
-                    Kitchen
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="bathroom"
-                    value="Bathroom"
-                  />
-                  <label className="form-check-label" htmlFor="bathroom">
-                    Bathroom
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="office"
-                    value="Office"
-                  />
-                  <label className="form-check-label" htmlFor="office">
-                    Office
-                  </label>
-                </div>
+                <select className="form-select" id="roomType">
+                  <option value="" disabled selected>
+                    Select type of cleaning
+                  </option>
+                  <option value="Living Room">Living Room</option>
+                  <option value="Bedrooms">Bedrooms</option>
+                  <option value="Kitchen">Kitchen</option>
+                  <option value="Bathroom">Bathroom</option>
+                  <option value="Office">Office</option>
+                </select>
               </div>
-            </div>
-            <div className="row mt-3"></div>
+            </diallv>
+
             <div className="row mt-3">
               <div className="col-md-6">
                 <h4>Area Size (sq ft)</h4>
@@ -136,78 +86,54 @@ function CleaningAppointment() {
                 <input
                   type="number"
                   className="form-control"
-                  id="rooms"
+                  id="noOfRooms"
                   placeholder="Enter the number of rooms"
                 />
               </div>
             </div>
+
+            {/* Cleaning Type and Frequency */}
             <div className="row mt-3">
-              {/* Preferred Service Date and Time */}
-              {/* <div className="row mt-3">
-                <div className="col-md-6">
-                  <h4>Preferred Service Date</h4>
-                  <input
-                    type="date"
-                    className="form-control"
-                    id="serviceDate"
-                  />
-                </div>
-                <div className="col-md-6">
-                  <h4>Preferred Service Time</h4>
-                  <input
-                    type="time"
-                    className="form-control"
-                    id="serviceTime"
-                  />
-                </div>
+              <div className="col-md-6">
+                <h4>Cleaning Type</h4>
+                <select className="form-select" id="cleaningType">
+                  <option value="" disabled selected>
+                    Select type of cleaning
+                  </option>
+                  <option value="standard">Standard Cleaning</option>
+                  <option value="deep">Deep Cleaning</option>
+                  <option value="moveInMoveOut">
+                    Move-In/Move-Out Cleaning
+                  </option>
+                  <option value="postConstruction">
+                    Post-Construction Cleaning
+                  </option>
+                </select>
               </div>
-              <div className="row mt-3">
+              <div className="col-md-6">
+                <h4>Frequency</h4>
+                <select className="form-select" id="frequency">
+                  <option value="" disabled selected>
+                    Select frequency
+                  </option>
+                  <option value="oneTime">One-Time</option>
+                  <option value="weekly">Weekly</option>
+                  <option value="biWeekly">Bi-Weekly</option>
+                  <option value="monthly">Monthly</option>
+                </select>
               </div>
+            </div>
 
-              {/* Cleaning Type and Frequency */}
-              <div className="row mt-3">
-                <div className="col-md-6">
-                  <h4>Cleaning Type</h4>
-                  <select className="form-select" id="cleaningType">
-                    <option value="" disabled selected>
-                      Select type of cleaning
-                    </option>
-                    <option value="standard">Standard Cleaning</option>
-                    <option value="deep">Deep Cleaning</option>
-                    <option value="moveInMoveOut">
-                      Move-In/Move-Out Cleaning
-                    </option>
-                    <option value="postConstruction">
-                      Post-Construction Cleaning
-                    </option>
-                  </select>
-                </div>
-                <div className="col-md-6">
-                  <h4>Frequency</h4>
-                  <select className="form-select" id="frequency">
-                    <option value="" disabled selected>
-                      Select frequency
-                    </option>
-                    <option value="oneTime">One-Time</option>
-                    <option value="weekly">Weekly</option>
-                    <option value="biWeekly">Bi-Weekly</option>
-                    <option value="monthly">Monthly</option>
-                  </select>
-                </div>
-              </div>
-              <div className="row mt-3"></div>
-
-              {/* Additional Details */}
-              <div className="row mt-3">
-                <div className="col-md-12">
-                  <h4>Additional Details</h4>
-                  <textarea
-                    className="form-control"
-                    id="additionalDetails"
-                    rows="3"
-                    placeholder="Provide any additional details"
-                  ></textarea>
-                </div>
+            {/* Additional Details */}
+            <div className="row mt-3">
+              <div className="col-md-12">
+                <h4>Additional Details</h4>
+                <textarea
+                  className="form-control"
+                  id="additionalDetails"
+                  rows="3"
+                  placeholder="Provide any additional details"
+                ></textarea>
               </div>
             </div>
 
