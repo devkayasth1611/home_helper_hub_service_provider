@@ -21,11 +21,11 @@ const ServiceSchema = new  Schema(
             type :String,
             require : true,
         },
-        serviceImage:{
-            type : String,
-            required : true,
-            trim : true,
-        },
+        // serviceImage:{
+        //     type : String,
+        //     required : true,
+        //     trim : true,
+        // },
         createdAt:{
             type : Date,
             default : Date.now,
