@@ -4,24 +4,18 @@ import { Link } from "react-router-dom";
 import "../App.css";
 
 function AdminTable() {
-  const [adminData, setAdminData] = useState([]); // Initialize an empty array to store the data
+  const [admins, setAdmins] = useState([]);
 
   useEffect(() => {
-    fetchAdminData(); // Call the fetch function when the component mounts
+    // Fetch data from API
+    axios.get("http://localhost:3000/admins/admin")
+      .then((response) => {
+        setAdmins(response.data.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the admin data!", error);
+      });
   }, []);
-
-  const fetchAdminData = async () => {
-    try {
-      const response = await axios.get("http://localhost:3000/admins/admin");
-      const data = response.data;
-      console.log("Response data:", data);
-      console.log("Type of data:", typeof data);
-      console.log("Array check:", Array.isArray(data));
-      setAdminData(data); // Update the state with the received data
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
   return (
     <div>
@@ -48,34 +42,31 @@ function AdminTable() {
                   <h5 className="card-title">Admin Table</h5>
 
                   {/* Table with stripped rows */}
-                  {adminData !== null && (
-                    <table className="table datatable">
-                      <thead>
-                        <tr>
-                          <th>Admin Name</th>
-                          <th>Email</th>
-                          <th>Password</th>
-                          <th>Phone Number</th>
-                          <th>Actions</th>
+                  <table className="table datatable">
+                    <thead>
+                      <tr>
+                        <th>Admin Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Phone Number</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {admins.map((admin) => (
+                        <tr key={admin._id}>
+                          <td>{admin.adminName}</td>
+                          <td>{admin.email}</td>
+                          <td>{admin.password}</td>
+                          <td>{admin.phoneNumber}</td>
+                          <td>
+                            <button className="edit-btn">Edit</button>
+                            <button className="delete-btn">Delete</button>
+                          </td>
                         </tr>
-                      </thead>
-                      <tbody>
-                        {Array.isArray(adminData) &&
-                          adminData.map((admin, index) => (
-                            <tr key={index}>
-                              <td>{admin.adminName}</td>
-                              <td>{admin.email}</td>
-                              <td>{admin.password}</td>
-                              <td>{admin.phoneNumber}</td>
-                              <td>
-                                <button className="edit-btn">Edit</button>
-                                <button className="delete-btn">Delete</button>
-                              </td>
-                            </tr>
-                          ))}
-                      </tbody>
-                    </table>
-                  )}
+                      ))}
+                    </tbody>
+                  </table>
                   {/* End Table with stripped rows */}
                 </div>
               </div>

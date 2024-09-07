@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema
 const UserSchema = new  Schema(
     {
-        userName:{
+        fullName:{
             type : String,
             required : true,
             trim : true,
@@ -18,15 +18,6 @@ const UserSchema = new  Schema(
             trim : true,
         },
         confirmPassword:{
-            type : String,
-            required : true,
-            trim : true,
-        },
-        firstName:{
-            type :String,
-            require : true,
-        },
-        lastName:{
             type : String,
             required : true,
             trim : true,

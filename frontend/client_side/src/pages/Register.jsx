@@ -7,12 +7,10 @@ const Register = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = {
-      userName: event.target.userName.value,
+      fullName: event.target.fullName.value,
       email: event.target.email.value,
       password: event.target.password.value,
       confirmPassword: event.target.confirmPassword.value,
-      firstName: event.target.firstName.value,
-      lastName: event.target.lastName.value,
       phoneNumber: event.target.phoneNumber.value,
       address: event.target.address.value,
     };
@@ -42,8 +40,8 @@ const Register = () => {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="User Name"
-                    id="userName"
+                    placeholder="Full Name"
+                    id="fullName"
                   />
                 </div>
                 <div className="mb-3">
@@ -68,22 +66,6 @@ const Register = () => {
                     className="form-control"
                     placeholder="Confirm Password"
                     id="confirmPassword"
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="First Name"
-                    id="firstName"
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Last Name"
-                    id="lastName"
                   />
                 </div>
                 <div className="mb-3">

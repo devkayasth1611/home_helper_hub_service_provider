@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
+import axios from "axios"; // Import Axios
 import "../App.css"
 
 function UserTable() {
+
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from API
+    axios.get("http://localhost:3000/users/user")
+      .then((response) => {
+        setUsers(response.data.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the user data!", error);
+      });
+  }, []);
+
+
   return (
     <div>
         <main id="main" className="main">
@@ -32,36 +48,28 @@ function UserTable() {
                   <table className="table datatable">
                     <thead>
                       <tr>
-                        <th>User Name</th>
+                        <th>Full Name</th>
                         <th>Email</th>
                         <th>Password</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
+                        <th>Phone Number</th>
                         <th>Address</th>
-                        <th>City</th>
-                        <th>State</th>
-                        <th>Zip</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>Krishna123</td>
-                        <td>Krishnabj@gmail.com</td>
-                        <td>123</td>
-                        <td>Krishna</td>
-                        <td>Joshi</td>
-                        <td>asdffgghhh</td>
-                        <td>Godhra</td>
-                        <td>Gujrat</td>
-                        <td>389001</td>
-                        <td>
-                          <button className="edit-btn">Edit</button>
-                          <button className="delete-btn">Delete</button>
-                        </td>
-                      </tr>
-                      
-                     
+                    {users.map((user) => (
+                        <tr key={user._id}>
+                          <td>{user.fullName}</td>
+                          <td>{user.email}</td>
+                          <td>{user.password}</td>
+                          <td>{user.phoneNumber}</td>
+                          <td>{user.address}</td>
+                          <td>
+                            <button className="edit-btn">Edit</button>
+                            <button className="delete-btn">Delete</button>
+                          </td>
+                        </tr>
+                      ))}
                       {/* Add more rows as needed */}
                     </tbody>
                   </table>
