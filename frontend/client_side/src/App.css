@@ -1138,7 +1138,7 @@ input.Enter_text::placeholder {
   margin-bottom: 20px;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #0c0c0c;
   transition: all 0.3s ease;
 }
 
