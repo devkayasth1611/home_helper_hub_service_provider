@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 function SwiftMove() {
   return (
@@ -95,9 +96,9 @@ function SwiftMove() {
             </div>
           </div>
           <div className="col-md-2 mb-5">
-            <button className="btn btn-primary" type="submit">
+            <Link className="btn btn-primary" to="/Appointment" type="submit">
               Add Service
-            </button>
+            </Link>
           </div>
         </section>
 
