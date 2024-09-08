@@ -1,7 +1,7 @@
-const AdminSchema = require("../model/adminModel");
+const adminSchema = require("../model/adminModel");
 
 exports.addAdmin = (req,res) => {
-  const admin = new AdminSchema(req.body);
+  const admin = new adminSchema(req.body);
   admin.save()
   .then((data) => {
       if(!data)
@@ -31,7 +31,7 @@ exports.addAdmin = (req,res) => {
 
 
 exports.getAllAdmin = (req,res) => {
-    AdminSchema.find().then((data)=>{
+    adminSchema.find().then((data)=>{
         if(!data)
         {
             res.json({
@@ -59,7 +59,7 @@ exports.getAllAdmin = (req,res) => {
 
 
 exports.getAdminById = (req, res) => {
-  AdminSchema
+  adminSchema
     .findById(req.params.id)
     .then((data) => {
       if (!data) {
@@ -88,7 +88,7 @@ exports.getAdminById = (req, res) => {
 
 
 exports.updateAdminById = (req, res) => {
-    AdminSchema
+    adminSchema
       .findOneAndUpdate(
         {
           _id: req.params.id,
@@ -123,7 +123,7 @@ exports.updateAdminById = (req, res) => {
   exports.deleteAdminById = (req, res) => {
     const id = req.params.id;
     console.log(id);
-    AdminSchema.findOneAndDelete(
+    adminSchema.findOneAndDelete(
       {
         _id: id,
       },

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose"); 
 const Schema = mongoose.Schema
+
 const AdminSchema = new  Schema(
     {
         adminName:{
@@ -13,7 +14,7 @@ const AdminSchema = new  Schema(
             trim : true,
         },
         password:{
-            type : String,
+            type : Number,
             required : true,
             trim : true,
         },

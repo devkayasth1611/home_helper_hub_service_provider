@@ -26,6 +26,7 @@ import PaymentForm from './Component/PaymentForm';
 import PaymentTable from './Component/PaymentTable';
 import ReviewForm from './Component/ReviewForm';
 import ReviewTable from './Component/ReviewTable';
+import AdminUpdate from './Component/AdminUpdate';
 
 function App() {
   
@@ -59,9 +60,7 @@ function App() {
           <Route path='/PaymentTable' element={<PaymentTable />} />
           <Route path='/ReviewForm' element={<ReviewForm />} />
           <Route path='/ReviewTable' element={<ReviewTable />} />
-          
-
-         
+          <Route path='/AdminUpdate' element={<AdminUpdate />} />
         </Routes>
         <Footer />
       </Router>
