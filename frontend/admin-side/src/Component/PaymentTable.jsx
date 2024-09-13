@@ -1,11 +1,27 @@
-import React from 'react'
-import "../App.css"
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
+import axios from "axios"; // Import Axios
+import "../App.css"
 
 function PaymentTable() {
+
+  const [payments, setPayments] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from API
+    axios.get("http://localhost:3000/payments/payment")
+      .then((response) => {
+        setPayments(response.data.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the payment data!", error);
+      });
+  }, []);
+
+
   return (
     <div>
-         <main id="main" className="main">
+        <main id="main" className="main">
         <div className="pagetitle">
           <h1>Data Tables</h1>
           <nav>
@@ -25,40 +41,31 @@ function PaymentTable() {
             <div className="col-lg-12">
               <div className="card">
                 <div className="card-body">
-                  <h5 className="card-title">Payment Tables</h5>
+                  <h5 className="card-title">Payment tables</h5>
                   
 
                   {/* Table with stripped rows */}
                   <table className="table datatable">
                     <thead>
                       <tr>
-                        
-                        
-                      <th>Amount</th>
-                        <th>Payment Method</th>
-                        
-                        <th data-type="date" data-format="YYYY/MM/DD">
-                          Payment Date
-                        </th>
+                        <th>amount</th>
+                        <th>paymentMethod</th>
+                        <th>paymentDate</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        
-                        <td>1200</td>
-                        <td>Online</td>
-                        <td>2024/06/16</td>
-                        
-                        <td>
-                          <button className="edit-btn">Edit</button>
-                          <button className="delete-btn">Delete</button>
-                        </td>
-                      </tr>
-                      
-                        
-                        
-                  
+                    {payments.map((payment) => (
+                        <tr key={payment._id}>
+                          <td>{payment.amount}</td>
+                          <td>{payment.paymentMethod}</td>
+                          <td>{payment.paymentDate}</td>
+                          <td>
+                            <button className="edit-btn">Edit</button>
+                            <button className="delete-btn">Delete</button>
+                          </td>
+                        </tr>
+                      ))}
                       {/* Add more rows as needed */}
                     </tbody>
                   </table>
@@ -73,4 +80,4 @@ function PaymentTable() {
   )
 }
 
-export default PaymentTable
+export default PaymentTable

@@ -40,10 +40,6 @@ app.listen(3000, (err, success) => {
   }
 }); //where my services will called()
 
-
-
-
-
 const multer = require('multer');
 //const upload = multer();
 const upload = multer({
