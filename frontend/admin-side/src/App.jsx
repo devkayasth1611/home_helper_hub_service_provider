@@ -27,14 +27,6 @@ import PaymentTable from './Component/PaymentTable';
 import ReviewForm from './Component/ReviewForm';
 import ReviewTable from './Component/ReviewTable';
 import AdminUpdate from './Component/AdminUpdate';
-import CarpenterTable from './Component/CarpenterTable';
-import PainterTable from './Component/PainterTable';
-import ElectricianTable from './Component/ElectricianTable';
-import PlumbingTable from './Component/PlumbingTable';
-import SwiftMoveTable from './Component/SwiftMoveTable';
-import EventManagementTable from './Component/EventManagementTable';
-import MasonTable from './Component/MasonTable';
-import CleaningTable from './Component/CleaningTable';
 
 function App() {
   
@@ -69,15 +61,6 @@ function App() {
           <Route path='/ReviewForm' element={<ReviewForm />} />
           <Route path='/ReviewTable' element={<ReviewTable />} />
           <Route path='/AdminUpdate' element={<AdminUpdate />} />
-          <Route path='/CarpenterTable' element={<CarpenterTable />} />
-          <Route path='/PainterTable' element={<PainterTable />} />
-          <Route path='/ElectricianTable' element={<ElectricianTable />} />
-          <Route path='/PlumbingTable' element={<PlumbingTable />} /> 
-          <Route path='/SwiftMoveTable' element={<SwiftMoveTable />} />
-          <Route path='/EventManagementTable' element={<EventManagementTable />} />
-          <Route path='/MasonTable' element={<MasonTable />} />
-          <Route path='/CleaningTable' element={<CleaningTable />} />
-
         </Routes>
         <Footer />
       </Router>

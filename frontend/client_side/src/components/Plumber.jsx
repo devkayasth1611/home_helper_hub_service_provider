@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 function Plumber() {
   return (
@@ -124,9 +125,9 @@ function Plumber() {
             </div>
           </div>
           <div className="col-md-2 mb-5">
-            <button className="btn btn-primary" type="submit">
-              ADD
-            </button>
+            <Link className="btn btn-primary" to="/Appointment" type="submit">
+              Add Service
+            </Link>
           </div>
         </section>
       </div>

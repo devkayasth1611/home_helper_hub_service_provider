@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Electrician() {
   return (
@@ -273,10 +274,12 @@ function Electrician() {
             </div>
           </div>
           <div className="col-md-2 mb-5">
-                  <button className="btn btn-primary" type="submit">ADD</button>
-                </div>
+            <Link className="btn btn-primary" to="/Appointment" type="submit">
+              Add Service
+            </Link>
+          </div>
         </div>
-        
+
         {/* image section */}
         <div className="container mt-4">
           <h4 className="mb-3 title1">Our Projects</h4>
