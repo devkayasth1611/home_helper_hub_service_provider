@@ -60,8 +60,8 @@ function UserForm() {
     {/* <!-- Browser Default Validation --> */}
               <form className="row g-3" onSubmit={handleSubmit}>
               <div className="col-12">
-        <label for="inputName" className="form-label">User Name</label>
-        <input type="text" className="form-control" id="userName" placeholder='Enter User Name'/>
+        <label for="inputName" className="form-label">Full Name</label>
+        <input type="text" className="form-control" id="fullName" placeholder='Enter Full Name'/>
       </div>
       <div className="col-12">
         <label for="inputEmail4" className="form-label">Email</label>
@@ -75,14 +75,7 @@ function UserForm() {
         <label for="inputPassword4" className="form-label">confirmPassword</label>
         <input type="password" className="form-control" id="confirmPassword" placeholder='Enter password'/>
       </div>
-                <div className="col-md-4">
-                  <label for="validationDefault01" className="form-label">First name</label>
-                  <input type="text" className="form-control" id="firstName" placeholder='Enter First Name'/>
-                </div>
-                <div className="col-md-4">
-                  <label for="validationDefault02" className="form-label">Last name</label>
-                  <input type="text" className="form-control" id="lastName" placeholder='Enter Last Name'/>
-                </div>
+               
                 <div className="col-12">
         <label for="inputName" className="form-label">Phone Number</label>
         <input type="text" className="form-control" id="phoneNumber" placeholder='Enter phone Number'/>

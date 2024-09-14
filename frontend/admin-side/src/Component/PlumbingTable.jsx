@@ -1,24 +1,27 @@
-import React,{useState,useEffect} from 'react'
-import "../App.css"
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 import axios from "axios"; // Import Axios
+import "../App.css"
 
-function ServiceProviderTable() {
-  const [serviceproviders, setserviceproviders] = useState([]);
+function PlumbingTable() {
+
+  const [plumbers, setPlumbers] = useState([]);
 
   useEffect(() => {
     // Fetch data from API
-    axios.get("http://localhost:3000/serviceproviders/serviceprovider")
+    axios.get("http://localhost:3000/plumbers/plumber")
       .then((response) => {
-        setserviceproviders(response.data.data);
+        setPlumbers(response.data.data);
       })
       .catch((error) => {
-        console.error("There was an error fetching the serviceprovider data!", error);
+        console.error("There was an error fetching the Plumbing data!", error);
       });
   }, []);
+
+
   return (
     <div>
-         <main id="main" className="main">
+        <main id="main" className="main">
         <div className="pagetitle">
           <h1>Data Tables</h1>
           <nav>
@@ -38,41 +41,37 @@ function ServiceProviderTable() {
             <div className="col-lg-12">
               <div className="card">
                 <div className="card-body">
-                  <h5 className="card-title">Service Provider Tables</h5>
+                  <h5 className="card-title">plumber tables</h5>
                   
 
                   {/* Table with stripped rows */}
                   <table className="table datatable">
                     <thead>
                       <tr>
-                        
-                        
-                      <th>Compney Name</th>
-                        <th>rating</th>
-                        <th>biography
-                        </th>
-                        <th>experience</th>
+                        <th>serviceType</th>
+                        <th>fixtureType</th>
+                        <th>urgency</th>
+                        <th>areaSize</th>
+                        <th>additionalDetails</th>
                         
                         <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
-                    {serviceproviders.map((serviceprovider) => (
-                        <tr key={serviceprovider._id}>
-                          <td>{serviceprovider.companyName}</td>
-                          <td>{serviceprovider.rating}</td>
-                          <td>{serviceprovider.biography}</td>
-                          <td>{serviceprovider.experience}</td>
+                    {plumbers.map((Plumber) => (
+                        <tr key={Plumber._id}>
+                          <td>{Plumber.serviceType}</td>
+                          <td>{Plumber.fixtureType}</td>
+                          <td>{Plumber.urgency}</td>
+                          <td>{Plumber.areaSize}</td>
+                          <td>{Plumber.additionalDetails}</td>
+                          
                           <td>
                             <button className="edit-btn">Edit</button>
                             <button className="delete-btn">Delete</button>
                           </td>
                         </tr>
                       ))}
-                      
-                        
-                        
-                  
                       {/* Add more rows as needed */}
                     </tbody>
                   </table>
@@ -87,4 +86,4 @@ function ServiceProviderTable() {
   )
 }
 
-export default ServiceProviderTable
+export default PlumbingTable

@@ -1,8 +1,21 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import "../App.css"
 import { Link } from 'react-router-dom'
+import axios from "axios"; // Import Axios
 
 function AppointmentTable() {
+  const [appointments, setUsers] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from API
+    axios.get("http://localhost:3000/appointments/appointment")
+      .then((response) => {
+        setUsers(response.data.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the appointment data!", error);
+      });
+  }, []);
   return (
     <div>
           <main id="main" className="main">
@@ -42,51 +55,17 @@ function AppointmentTable() {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        
-                        <td>1999/04/07</td>
-                        <td>97%</td>
-                        <td>
-                          <button className="edit-btn">Edit</button>
-                          <button className="delete-btn">Delete</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        
-                        <td>2005/09/08</td>
-                        <td>63%</td>
-                        <td>
-                          <button className="edit-btn">Edit</button>
-                          <button className="delete-btn">Delete</button>
-                        </td>
-                      </tr>
-                      <tr>
-                    
-                    <td>2016/27/02</td>
-                    <td>13%</td>
-                    <td>
-                          <button className="edit-btn">Edit</button>
-                          <button className="delete-btn">Delete</button>
-                        </td>
-                  </tr>
-                  <tr>
-                    
-                    <td>2015/03/02</td>
-                    <td>13%</td>
-                    <td>
-                          <button className="edit-btn">Edit</button>
-                          <button className="delete-btn">Delete</button>
-                        </td>
-                  </tr>
-                  <tr>
-                    
-                    <td>2015/26/04</td>
-                    <td>56%</td>
-                    <td>
-                          <button className="edit-btn">Edit</button>
-                          <button className="delete-btn">Delete</button>
-                        </td>
-                  </tr>
+                    {appointments.map((appointment) => (
+                        <tr key={appointment._id}>
+                          <td>{appointment.appointmentDate}</td>
+                          <td>{appointment.status}</td>
+                          
+                          <td>
+                            <button className="edit-btn">Edit</button>
+                            <button className="delete-btn">Delete</button>
+                          </td>
+                        </tr>
+                      ))}
                  
                   
                       {/* Add more rows as needed */}

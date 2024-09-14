@@ -73,6 +73,48 @@ function SideBar() {
               <i className="bi bi-circle"></i><span>Review Table</span>
             </Link>
           </li>
+          <li>
+            <Link to="/PainterTable">
+              <i className="bi bi-circle"></i><span>Painter Table</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/CarpenterTable">
+              <i className="bi bi-circle"></i><span>Carpenter Table</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/ElectricianTable">
+              <i className="bi bi-circle"></i><span>Electrician Table</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/PlumbingTable">
+              <i className="bi bi-circle"></i><span>Plumbing Table</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/SwiftMoveTable">
+              <i className="bi bi-circle"></i><span>swift-Move Table</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/EventManagementTable">
+              <i className="bi bi-circle"></i><span>Event-Management Table</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/MasonTable">
+              <i className="bi bi-circle"></i><span>Mason Table</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/CleaningTable">
+              <i className="bi bi-circle"></i><span>Cleaning Table</span>
+            </Link>
+          </li>
+          
+          
         </ul>
       </li>
   </li>

@@ -1,8 +1,22 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import "../App.css"
 import { Link } from 'react-router-dom'
+import axios from "axios"; // Import Axios
 
 function ServiceCategoryTable() {
+  const [categories, setcategories] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from API
+    axios.get("http://localhost:3000/categories/category")
+      .then((response) => {
+        setcategories(response.data.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the category data!", error);
+      });
+  }, []);
+
   return (
     <div>
          <main id="main" className="main">
@@ -41,20 +55,17 @@ function ServiceCategoryTable() {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        
-                        <td>Painter</td>
-                        <td>asfdaih</td>
-                        
-                        <td>
-                          <button className="edit-btn">Edit</button>
-                          <button className="delete-btn">Delete</button>
-                        </td>
-                      </tr>
-                      
-                        
-                        
-                  
+                      {categories.map((category) => (
+                        <tr key={category._id}>
+                          <td>{category.categoryName}</td>
+                          <td>{category.description}</td>
+                          
+                          <td>
+                            <button className="edit-btn">Edit</button>
+                            <button className="delete-btn">Delete</button>
+                          </td>
+                        </tr>
+                      ))}
                       {/* Add more rows as needed */}
                     </tbody>
                   </table>

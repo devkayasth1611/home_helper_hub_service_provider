@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const paintingController = require("../controller/paintingController");
-const validate = require('../middleware/zodMiddleware');
+// const validate = require('../middleware/zodMiddleware');
 // const paintingValidation = require('../util/paintingValidation');  
 
 router.post('/painting',paintingController.addPainting);

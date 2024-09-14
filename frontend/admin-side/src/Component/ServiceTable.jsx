@@ -1,8 +1,21 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import "../App.css"
+import axios from "axios"; // Import Axios
 import { Link } from 'react-router-dom'
 
 function ServiceTable() {
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from API
+    axios.get("http://localhost:3000/services/service")
+      .then((response) => {
+        setServices(response.data.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the Service data!", error);
+      });
+  }, []);
   return (
     <div>
         <main id="main" className="main">
@@ -38,24 +51,24 @@ function ServiceTable() {
                         <th>Description</th>
                         <th>Price</th>
                         <th>Duration</th>
-                        <th>Service Image</th>
+                        {/* <th>Service Image</th> */}
                         <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        
-                        <td>Painter</td>
-                        <td>asfdaih</td>
-                        <td>123</td>
-                        <td>1</td>
-                        <td>97%</td>
-                        <td>
-                          <button className="edit-btn">Edit</button>
-                          <button className="delete-btn">Delete</button>
-                        </td>
-                      </tr>
-                      
+                    {services.map((service) => (
+                        <tr key={service._id}>
+                          <td>{service.serviceName}</td>
+                          <td>{service.description}</td>
+                          <td>{service.price}</td>
+                          <td>{service.duration}</td>
+                          
+                          <td>
+                            <button className="edit-btn">Edit</button>
+                            <button className="delete-btn">Delete</button>
+                          </td>
+                        </tr>
+                      ))}
                         
                         
                   
